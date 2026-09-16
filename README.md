@@ -1,5 +1,3 @@
-[![TrackIQ MCP — connect your AI assistant to Amazon data. 16 tools, full MCP access, $69/mo. Works with Claude, ChatGPT and Cursor.](.github/trackiq-mcp-banner.png)](https://trackiq.com/mcp)
-
 # TrackIQ Skills for Amazon Sellers
 
 Agent Skills that turn TrackIQ data into the things you'd otherwise build
@@ -13,10 +11,9 @@ with it.
 
 ---
 
-
----
-
 ## Powered by the TrackIQ MCP
+
+[![TrackIQ MCP — connect your AI assistant to Amazon data. 16 tools, full MCP access, $69/mo. Works with Claude, ChatGPT and Cursor.](.github/trackiq-mcp-banner.png)](https://trackiq.com/mcp)
 
 These skills read your live Amazon account through the
 **[TrackIQ MCP](https://trackiq.com/mcp)** — 16 tools connecting your AI
