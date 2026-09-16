@@ -1,0 +1,17 @@
+{
+  "name": "trackiq-skill-name",
+  "title": "Human Title",
+  "version": "0.1.0",
+  "updated": "YYYY-MM-DD",
+  "summary": "One sentence for the website card — what the user gets, not what it does internally.",
+  "changelog": "First public release.",
+  "requires": {
+    "mcp": ["trackiq"],
+    "tools": ["tool_a", "tool_b"],
+    "filesystem": false,
+    "network": false
+  },
+  "fallback": "Works from figures pasted into the chat when the TrackIQ MCP is not connected.",
+  "homepage": "https://trackiq.com/skills/trackiq-skill-name",
+  "license": "MIT"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "trackiq",
+  "owner": {
+    "name": "TrackIQ",
+    "email": "hello@trackiq.com",
+    "url": "https://trackiq.com"
+  },
+  "metadata": {
+    "description": "Agent Skills for Amazon sellers running the TrackIQ MCP.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "trackiq-amazon-daily-snacks-email",
+      "source": {
+        "source": "github",
+        "repo": "TrackIQ-HQ/trackiq-amazon-daily-snacks-email"
+      },
+      "description": "TrackIQ: Amazon Daily Snacks Email — a three-minute editorial daily email for an Amazon seller account. One lead story with a takeaway, quick bites, a scoreboard, charts, product-line rankings, rank/BSR and a to-do list.",
+      "version": "1.0.0",
+      "author": { "name": "TrackIQ" },
+      "homepage": "https://github.com/TrackIQ-HQ/trackiq-amazon-daily-snacks-email",
+      "keywords": ["amazon", "amazon-seller", "amazon-ads", "advertising", "reporting", "ppc", "dsp", "acos", "tacos", "email", "trackiq"]
+    }
+  ]
+}
