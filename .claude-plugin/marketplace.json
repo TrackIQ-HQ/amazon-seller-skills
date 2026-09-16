@@ -16,11 +16,50 @@
         "source": "github",
         "repo": "TrackIQ-HQ/trackiq-amazon-daily-snacks-email"
       },
-      "description": "TrackIQ: Amazon Daily Snacks Email — a three-minute editorial daily email for an Amazon seller account. One lead story with a takeaway, quick bites, a scoreboard, charts, product-line rankings, rank/BSR and a to-do list.",
+      "description": "TrackIQ: Amazon Daily Snacks Email \u2014 a three-minute editorial daily email for an Amazon seller account. One lead story with a takeaway, quick bites, a scoreboard, charts, product-line rankings, rank/BSR and a to-do list.",
       "version": "1.0.0",
-      "author": { "name": "TrackIQ" },
+      "author": {
+        "name": "TrackIQ"
+      },
       "homepage": "https://github.com/TrackIQ-HQ/trackiq-amazon-daily-snacks-email",
-      "keywords": ["amazon", "amazon-seller", "amazon-ads", "advertising", "reporting", "ppc", "dsp", "acos", "tacos", "email", "trackiq"]
+      "keywords": [
+        "amazon",
+        "amazon-seller",
+        "amazon-ads",
+        "advertising",
+        "reporting",
+        "ppc",
+        "dsp",
+        "acos",
+        "tacos",
+        "email",
+        "trackiq"
+      ]
+    },
+    {
+      "name": "trackiq-amazon-weekly-executive-report",
+      "source": {
+        "source": "github",
+        "repo": "TrackIQ-HQ/trackiq-amazon-weekly-executive-report"
+      },
+      "description": "TrackIQ: Amazon Weekly Executive Report \u2014 a client-ready week-over-week Amazon recap. Scorecard, pacing against the brand's own trailing four-week average, marginal return by product line, DSP breakout, keyword economics and inventory days-of-cover.",
+      "version": "1.0.0",
+      "author": {
+        "name": "TrackIQ"
+      },
+      "homepage": "https://github.com/TrackIQ-HQ/trackiq-amazon-weekly-executive-report",
+      "keywords": [
+        "amazon",
+        "amazon-seller",
+        "amazon-ads",
+        "advertising",
+        "reporting",
+        "ppc",
+        "dsp",
+        "weekly-report",
+        "client-reporting",
+        "trackiq"
+      ]
     }
   ]
 }
