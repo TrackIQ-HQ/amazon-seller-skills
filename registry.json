@@ -1,0 +1,93 @@
+{
+  "generated": "2026-09-17",
+  "marketplace": "TrackIQ-HQ/amazon-seller-skills",
+  "homepage": "https://trackiq.com/skills",
+  "skills": [
+    {
+      "name": "trackiq-amazon-daily-snacks-email",
+      "title": "TrackIQ: Amazon Daily Snacks Email",
+      "version": "1.1.1",
+      "updated": "2026-09-16",
+      "summary": "A three-minute editorial daily email for an Amazon account \u2014 one lead story with a takeaway, quick bites, a scoreboard, charts and a to-do list.",
+      "changelog": "Replaces the bundled sample data with a fictional demo brand shared with the weekly report.",
+      "requires": {
+        "mcp": [
+          "trackiq"
+        ],
+        "tools": [
+          "get_account_overview",
+          "get_campaigns",
+          "get_product_performance",
+          "get_bsr"
+        ],
+        "filesystem": false,
+        "network": false
+      },
+      "fallback": "Works from figures pasted into the chat when the TrackIQ MCP is not connected.",
+      "homepage": "https://trackiq.com/skills/trackiq-amazon-daily-snacks-email",
+      "license": "MIT",
+      "delivery": {
+        "methods": [
+          "in-chat",
+          "file",
+          "slack",
+          "n8n",
+          "email"
+        ],
+        "default": "in-chat",
+        "note": "in-chat always works and is the fallback. file needs a filesystem, n8n needs network, slack and email need their tool connected. Outward sends confirm first."
+      },
+      "plugin": "trackiq-amazon-daily-snacks-email",
+      "repository": "https://github.com/TrackIQ-HQ/trackiq-amazon-daily-snacks-email",
+      "install": {
+        "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-daily-snacks-email@trackiq",
+        "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-daily-snacks-email/releases/latest/download/trackiq-amazon-daily-snacks-email.zip",
+        "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-daily-snacks-email/releases/latest/download/trackiq-amazon-daily-snacks-email-1.1.1.zip"
+      }
+    },
+    {
+      "name": "trackiq-amazon-weekly-executive-report",
+      "title": "TrackIQ: Amazon Weekly Executive Report",
+      "version": "1.0.0",
+      "updated": "2026-09-16",
+      "summary": "A client-ready week-over-week Amazon recap \u2014 scorecard, pacing against the brand's own trailing four-week average, per-line marginal return, DSP breakout, keyword economics, inventory days-of-cover and this week's decisions.",
+      "changelog": "First public release.",
+      "requires": {
+        "mcp": [
+          "trackiq"
+        ],
+        "tools": [
+          "get_account_overview",
+          "get_campaigns",
+          "get_product_performance",
+          "get_dsp_performance",
+          "get_inventory_snapshot",
+          "get_search_query_performance"
+        ],
+        "filesystem": false,
+        "network": false
+      },
+      "fallback": "Works from this week's and last week's figures pasted into the chat when the TrackIQ MCP is not connected.",
+      "homepage": "https://trackiq.com/skills/trackiq-amazon-weekly-executive-report",
+      "license": "MIT",
+      "delivery": {
+        "methods": [
+          "in-chat",
+          "file",
+          "slack",
+          "n8n",
+          "email"
+        ],
+        "default": "in-chat",
+        "note": "in-chat always works and is the fallback. file needs a filesystem, n8n needs network, slack and email need their tool connected. Outward sends confirm first."
+      },
+      "plugin": "trackiq-amazon-weekly-executive-report",
+      "repository": "https://github.com/TrackIQ-HQ/trackiq-amazon-weekly-executive-report",
+      "install": {
+        "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-weekly-executive-report@trackiq",
+        "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-weekly-executive-report/releases/latest/download/trackiq-amazon-weekly-executive-report.zip",
+        "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-weekly-executive-report/releases/latest/download/trackiq-amazon-weekly-executive-report-1.0.0.zip"
+      }
+    }
+  ]
+}
