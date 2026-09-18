@@ -35,6 +35,7 @@ Works with Claude, ChatGPT and Cursor. **[Get access →](https://trackiq.com/mc
 /plugin marketplace add TrackIQ-HQ/amazon-seller-skills
 /plugin install trackiq-amazon-daily-snacks-email@trackiq
 /plugin install trackiq-amazon-weekly-executive-report@trackiq
+/plugin install trackiq-amazon-category-priority-keywords@trackiq
 ```
 
 Installed this way, skills update themselves. Run
@@ -49,6 +50,7 @@ web, Claude desktop or ChatGPT — see the skill's own README.
 |---|---|---|
 | [**TrackIQ: Amazon Daily Snacks Email**](https://github.com/TrackIQ-HQ/trackiq-amazon-daily-snacks-email) | A three-minute editorial daily email — lead story, quick bites, scoreboard, charts, to-do list | TrackIQ MCP |
 | [**TrackIQ: Amazon Weekly Executive Report**](https://github.com/TrackIQ-HQ/trackiq-amazon-weekly-executive-report) | A client-ready weekly recap — scorecard, pacing, marginal return by line, DSP, keyword economics, inventory cover | TrackIQ MCP |
+| [**TrackIQ: Amazon Category Priority Keywords**](https://github.com/TrackIQ-HQ/trackiq-amazon-category-priority-keywords) | The 25 search terms per product category worth tracking organic rank on, priced, with a rank-tracker gap check | TrackIQ MCP + SQP |
 
 Every skill degrades gracefully: with no connector attached, it asks you to
 paste the figures and builds from those.

@@ -60,6 +60,30 @@
         "client-reporting",
         "trackiq"
       ]
+    },
+    {
+      "name": "trackiq-amazon-category-priority-keywords",
+      "source": {
+        "source": "github",
+        "repo": "TrackIQ-HQ/trackiq-amazon-category-priority-keywords"
+      },
+      "description": "TrackIQ: Amazon Category Priority Keywords \u2014 groups the catalogue into product categories and picks the 25 search terms per category worth tracking organic rank on, each with weekly volume, estimated monthly revenue, impression share and a rank-tracking gap check.",
+      "version": "1.0.0",
+      "author": {
+        "name": "TrackIQ"
+      },
+      "homepage": "https://github.com/TrackIQ-HQ/trackiq-amazon-category-priority-keywords",
+      "keywords": [
+        "amazon",
+        "amazon-seller",
+        "sqp",
+        "search-query-performance",
+        "keyword-research",
+        "organic-rank",
+        "rank-tracking",
+        "seo",
+        "trackiq"
+      ]
     }
   ]
 }
