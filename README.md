@@ -37,6 +37,7 @@ Works with Claude, ChatGPT and Cursor. **[Get access →](https://trackiq.com/mc
 /plugin install trackiq-amazon-weekly-executive-report@trackiq
 /plugin install trackiq-amazon-category-priority-keywords@trackiq
 /plugin install trackiq-amazon-amc-media-mix@trackiq
+/plugin install trackiq-amazon-search-visibility-audit@trackiq
 ```
 
 Installed this way, skills update themselves. Run
@@ -53,6 +54,7 @@ web, Claude desktop or ChatGPT — see the skill's own README.
 | [**TrackIQ: Amazon Weekly Executive Report**](https://github.com/TrackIQ-HQ/trackiq-amazon-weekly-executive-report) | A client-ready weekly recap — scorecard, pacing, marginal return by line, DSP, keyword economics, inventory cover | TrackIQ MCP |
 | [**TrackIQ: Amazon Category Priority Keywords**](https://github.com/TrackIQ-HQ/trackiq-amazon-category-priority-keywords) | The 25 search terms per product category worth tracking organic rank on, priced, with a rank-tracker gap check | TrackIQ MCP + SQP |
 | [**TrackIQ: Amazon AMC Media Mix**](https://github.com/TrackIQ-HQ/trackiq-amazon-amc-media-mix) | A twelve-slide media mix deck — attribution paths, what DSP is worth, cost per new customer, one reallocation | TrackIQ MCP + AMC + DSP |
+| [**TrackIQ: Amazon Search Visibility Audit**](https://github.com/TrackIQ-HQ/trackiq-amazon-search-visibility-audit) | Where your ASINs appear in search — owned, doubled, bought or absent per query, plus the priced gap | TrackIQ MCP |
 
 Every skill degrades gracefully: with no connector attached, it asks you to
 paste the figures and builds from those.

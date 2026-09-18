@@ -109,6 +109,29 @@
         "new-to-brand",
         "trackiq"
       ]
+    },
+    {
+      "name": "trackiq-amazon-search-visibility-audit",
+      "source": {
+        "source": "github",
+        "repo": "TrackIQ-HQ/trackiq-amazon-search-visibility-audit"
+      },
+      "description": "TrackIQ: Amazon Search Visibility Audit \u2014 where your ASINs appear in Amazon search. Every revenue-bearing query placed as owned, doubled, bought or absent; the paid/organic overlap; share of voice; and the revenue behind the queries you are absent from. No third-party API required.",
+      "version": "1.0.0",
+      "author": {
+        "name": "TrackIQ"
+      },
+      "homepage": "https://github.com/TrackIQ-HQ/trackiq-amazon-search-visibility-audit",
+      "keywords": [
+        "amazon",
+        "amazon-seller",
+        "organic-rank",
+        "rank-tracking",
+        "share-of-voice",
+        "seo",
+        "search-visibility",
+        "trackiq"
+      ]
     }
   ]
 }
