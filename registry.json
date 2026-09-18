@@ -81,7 +81,7 @@
       "category": "advertising",
       "version": "1.0.0",
       "updated": "2026-09-18",
-      "summary": "Builds a mid-month Amazon advertising pacing report \u2014 month-to-date spend against the plan, a day-weighted projection to month end, the gap in dollars, which portfolios are capping out before the day is over, which are underdelivering their share, and a reallocation table that moves budget from the second to the first. Use when the user asks about budget pacing, are we on budget, month-end forecas",
+      "summary": "Builds a mid-month Amazon advertising pacing report \u2014 month-to-date spend against the plan, a day-weighted projection to month end, the gap in dollars, which portfolios are capping out before the day is over, which are underdelivering their share, and a reallocation table that moves budget from the second to the first.",
       "changelog": "First public release.",
       "requires": {
         "mcp": [
@@ -124,7 +124,7 @@
       "category": "advertising",
       "version": "1.0.0",
       "updated": "2026-09-18",
-      "summary": "Breaks Amazon DSP down by audience, creative, inventory source, technology and geography to show which segments actually recruit customers and which burn impressions. Ranks on new-to-brand purchases, detail page views and cost per action rather than ROAS, because DSP revenue is not returned at these dimensions. Use when the user asks about DSP performance, which audiences work, creative performanc",
+      "summary": "Breaks Amazon DSP down by audience, creative, inventory source, technology and geography to show which segments actually recruit customers and which burn impressions. Ranks on new-to-brand purchases, detail page views and cost per action rather than ROAS, because DSP revenue is not returned at these dimensions.",
       "changelog": "First public release.",
       "requires": {
         "mcp": [
@@ -165,7 +165,7 @@
       "category": "advertising",
       "version": "1.0.0",
       "updated": "2026-09-18",
-      "summary": "Finds the Amazon search terms that already convert above break-even but have no keyword of their own, and turns them into an upload-ready Sponsored Products bulk file with exact-match keywords and suggested bids. Checks every candidate against the existing targets so nothing is proposed twice. Use when the user asks about harvesting search terms, promoting search terms to keywords, mining auto cam",
+      "summary": "Finds the Amazon search terms that already convert above break-even but have no keyword of their own, and turns them into an upload-ready Sponsored Products bulk file with exact-match keywords and suggested bids. Checks every candidate against the existing targets so nothing is proposed twice.",
       "changelog": "First public release.",
       "requires": {
         "mcp": [
@@ -208,7 +208,7 @@
       "category": "advertising",
       "version": "1.0.0",
       "updated": "2026-09-18",
-      "summary": "Finds Amazon advertising spend that is not paying for itself \u2014 keywords that spent and sold nothing, keywords bidding above what they return, the same keyword duplicated across ad groups bidding against itself, and search terms worth negating \u2014 then produces an Amazon bulk-operations workbook with the campaign, ad group and keyword IDs already attached, plus a one-page summary of what is being cut",
+      "summary": "Finds Amazon advertising spend that is not paying for itself \u2014 keywords that spent and sold nothing, keywords bidding above what they return, the same keyword duplicated across ad groups bidding against itself, and search terms worth negating \u2014 then produces an Amazon bulk-operations workbook with the campaign, ad group and keyword IDs already attached, plus a one-page summary of what is being cut and why.",
       "changelog": "First public release.",
       "requires": {
         "mcp": [
@@ -296,7 +296,7 @@
       "category": "search",
       "version": "1.0.0",
       "updated": "2026-09-18",
-      "summary": "Tracks weekly organic rank movement across a brand's priority keyword set by sampling live search results, compares it to the previous run, and weights every gain and loss by what that keyword is worth in revenue so the drops that cost real money surface first and the rest stay quiet. Use when the user asks about rank movement, organic rank changes, what moved this week, keyword rank tracking, did",
+      "summary": "Tracks weekly organic rank movement across a brand's priority keyword set by sampling live search results, compares it to the previous run, and weights every gain and loss by what that keyword is worth in revenue so the drops that cost real money surface first and the rest stay quiet.",
       "changelog": "First public release.",
       "requires": {
         "mcp": [
@@ -478,7 +478,7 @@
       "category": "listing",
       "version": "1.0.0",
       "updated": "2026-09-18",
-      "summary": "Sweeps a whole Amazon catalogue for the quiet defects nobody owns \u2014 thin image sets, truncating or short titles, bullet counts above or below what displays, orphaned and duplicate SKUs, dead and GUID listings cluttering the inventory, products with no ads and no traffic, and listings that are live but not buyable \u2014 ranked by revenue at risk so the list is finite. Use when the user asks for a catal",
+      "summary": "Sweeps a whole Amazon catalogue for the quiet defects nobody owns \u2014 thin image sets, truncating or short titles, bullet counts above or below what displays, orphaned and duplicate SKUs, dead and GUID listings cluttering the inventory, products with no ads and no traffic, and listings that are live but not buyable \u2014 ranked by revenue at risk so the list is finite.",
       "changelog": "First public release.",
       "requires": {
         "mcp": [
@@ -525,7 +525,7 @@
       "category": "listing",
       "version": "1.0.0",
       "updated": "2026-09-18",
-      "summary": "Puts one Amazon product page side by side with the three or four beating it on the shelf \u2014 title structure, image count, bullet construction, price and price per unit, coupons, rating and review depth, and rank \u2014 then says what to change and in what order. Compares content, not slots. Use when the user asks how we compare to competitors, a competitor teardown, competitive analysis, why competitors",
+      "summary": "Puts one Amazon product page side by side with the three or four beating it on the shelf \u2014 title structure, image count, bullet construction, price and price per unit, coupons, rating and review depth, and rank \u2014 then says what to change and in what order. Compares content, not slots.",
       "changelog": "First public release.",
       "requires": {
         "mcp": [
@@ -617,7 +617,7 @@
       "category": "listing",
       "version": "1.0.0",
       "updated": "2026-09-18",
-      "summary": "Rewrites one Amazon listing \u2014 title, bullets, description and backend terms \u2014 against the terms it should rank for and the questions shoppers actually ask, producing a side-by-side of current and proposed copy with the reason for every change. Built for how Amazon matches intent and answers questions in 2026, not for keyword stuffing. Use when the user asks to optimise a listing, rewrite a title o",
+      "summary": "Rewrites one Amazon listing \u2014 title, bullets, description and backend terms \u2014 against the terms it should rank for and the questions shoppers actually ask, producing a side-by-side of current and proposed copy with the reason for every change. Built for how Amazon matches intent and answers questions in 2026, not for keyword stuffing.",
       "changelog": "First public release.",
       "requires": {
         "mcp": [
@@ -664,7 +664,7 @@
       "category": "listing",
       "version": "1.0.0",
       "updated": "2026-09-18",
-      "summary": "Builds a voice-of-customer picture for a brand by sampling reviews across its own catalogue and its competitors, clustering what buyers praise and complain about into themes, and turning those into bullet and A+ copy directions plus negative keywords. Uses the full star distribution for anything quantitative because only about eight review bodies are retrievable per product. Use when the user asks",
+      "summary": "Builds a voice-of-customer picture for a brand by sampling reviews across its own catalogue and its competitors, clustering what buyers praise and complain about into themes, and turning those into bullet and A+ copy directions plus negative keywords. Uses the full star distribution for anything quantitative because only about eight review bodies are retrievable per product.",
       "changelog": "First public release.",
       "requires": {
         "mcp": [
@@ -711,7 +711,7 @@
       "category": "inventory",
       "version": "1.0.0",
       "updated": "2026-09-18",
-      "summary": "Turns trailing sales and last year's seasonal shape into a week-by-week demand forecast per Amazon product, then converts it into order quantities and order-by dates that account for lead time, safety stock and the service level the brand wants \u2014 with the forecast error stated so nobody treats it as certain. Use when the user asks how much to order, a demand forecast, a reorder plan, purchase orde",
+      "summary": "Turns trailing sales and last year's seasonal shape into a week-by-week demand forecast per Amazon product, then converts it into order quantities and order-by dates that account for lead time, safety stock and the service level the brand wants \u2014 with the forecast error stated so nobody treats it as certain.",
       "changelog": "First public release.",
       "requires": {
         "mcp": [
@@ -753,7 +753,7 @@
       "category": "inventory",
       "version": "1.0.0",
       "updated": "2026-09-18",
-      "summary": "Finds the Amazon inventory sitting too long \u2014 products with cover far beyond target, stock stranded on SKUs that no longer sell, and unfulfillable units \u2014 and ranks them by capital tied up, with a recommendation per product to discount, advertise, bundle, remove or write off. Use when the user asks about excess inventory, overstock, aged inventory, slow-moving stock, dead stock, capital tied up in",
+      "summary": "Finds the Amazon inventory sitting too long \u2014 products with cover far beyond target, stock stranded on SKUs that no longer sell, and unfulfillable units \u2014 and ranks them by capital tied up, with a recommendation per product to discount, advertise, bundle, remove or write off.",
       "changelog": "First public release.",
       "requires": {
         "mcp": [
@@ -796,7 +796,7 @@
       "category": "inventory",
       "version": "1.0.0",
       "updated": "2026-09-18",
-      "summary": "Finds the Amazon campaigns still paying to advertise products that are about to run out of stock, and produces an upload-ready bulk file that throttles or pauses those ads with the real campaign, ad group and ad IDs attached \u2014 plus where the freed budget should go instead. Use when the user asks about advertising products that are out of stock, throttling ads on low inventory, wasted spend on stoc",
+      "summary": "Finds the Amazon campaigns still paying to advertise products that are about to run out of stock, and produces an upload-ready bulk file that throttles or pauses those ads with the real campaign, ad group and ad IDs attached \u2014 plus where the freed budget should go instead.",
       "changelog": "First public release.",
       "requires": {
         "mcp": [
@@ -840,7 +840,7 @@
       "category": "inventory",
       "version": "1.0.0",
       "updated": "2026-09-18",
-      "summary": "Works out which Amazon products to ship next and in what order \u2014 days of cover at the current sales rate, the date each one runs out, the date a purchase order needed placing to beat it, the revenue exposed if it is late, and a starting shipment quantity per product. Ranked by revenue at risk rather than by days of cover. Use when the user asks about restocking, reordering, replenishment, days of ",
+      "summary": "Works out which Amazon products to ship next and in what order \u2014 days of cover at the current sales rate, the date each one runs out, the date a purchase order needed placing to beat it, the revenue exposed if it is late, and a starting shipment quantity per product. Ranked by revenue at risk rather than by days of cover.",
       "changelog": "First public release.",
       "requires": {
         "mcp": [
@@ -882,7 +882,7 @@
       "category": "inventory",
       "version": "1.0.0",
       "updated": "2026-09-18",
-      "summary": "Measures what a completed Amazon stockout actually cost \u2014 lost units and revenue against the pre-stockout run rate, how far sessions and conversion fell, whether they have come back, and how long recovery is taking \u2014 then produces a staged plan for restarting ads and rebuilding rank. Use when the user asks what a stockout cost, lost sales from being out of stock, stockout impact, recovery after a ",
+      "summary": "Measures what a completed Amazon stockout actually cost \u2014 lost units and revenue against the pre-stockout run rate, how far sessions and conversion fell, whether they have come back, and how long recovery is taking \u2014 then produces a staged plan for restarting ads and rebuilding rank.",
       "changelog": "First public release.",
       "requires": {
         "mcp": [
@@ -971,7 +971,7 @@
       "category": "operations",
       "version": "1.0.0",
       "updated": "2026-09-18",
-      "summary": "Grades a newly launched Amazon ASIN week by week through its first twelve weeks \u2014 units and revenue against a target curve, session growth, conversion rate, review accumulation, organic rank on its target keywords, and TACoS against a declining break-even glide path \u2014 ending in a go, hold or fix verdict with one lever. Use when the user asks about a product launch, new ASIN performance, launch tra",
+      "summary": "Grades a newly launched Amazon ASIN week by week through its first twelve weeks \u2014 units and revenue against a target curve, session growth, conversion rate, review accumulation, organic rank on its target keywords, and TACoS against a declining break-even glide path \u2014 ending in a go, hold or fix verdict with one lever.",
       "changelog": "First public release.",
       "requires": {
         "mcp": [
@@ -1016,7 +1016,7 @@
       "category": "operations",
       "version": "1.0.0",
       "updated": "2026-09-18",
-      "summary": "Builds the month-end client deck for one Amazon brand \u2014 revenue and spend against the previous month and the same month last year, the organic and paid split, category and product mix, what moved and why, and a prioritised plan for next month. Checks that last year's ad data actually exists before drawing a year-on-year comparison. Use when the user asks for a monthly business review, MBR, month-e",
+      "summary": "Builds the month-end client deck for one Amazon brand \u2014 revenue and spend against the previous month and the same month last year, the organic and paid split, category and product mix, what moved and why, and a prioritised plan for next month. Checks that last year's ad data actually exists before drawing a year-on-year comparison.",
       "changelog": "First public release.",
       "requires": {
         "mcp": [
@@ -1061,7 +1061,7 @@
       "category": "operations",
       "version": "1.0.0",
       "updated": "2026-09-18",
-      "summary": "Ranks an Amazon catalogue by how much each product's revenue moved between two periods and decomposes every mover into its cause \u2014 traffic, conversion rate, units per order, or average selling price \u2014 so the answer is \"sessions fell 31%\", not \"sales are down\". Use when the user asks why sales are down or up, what moved, which products changed, root cause, what happened last week, sales diagnosis, ",
+      "summary": "Ranks an Amazon catalogue by how much each product's revenue moved between two periods and decomposes every mover into its cause \u2014 traffic, conversion rate, units per order, or average selling price \u2014 so the answer is \"sessions fell 31%\", not \"sales are down\".",
       "changelog": "First public release.",
       "requires": {
         "mcp": [
