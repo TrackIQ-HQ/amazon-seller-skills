@@ -39,6 +39,7 @@ Works with Claude, ChatGPT and Cursor. **[Get access →](https://trackiq.com/mc
 /plugin install trackiq-amazon-amc-media-mix@trackiq
 /plugin install trackiq-amazon-search-visibility-audit@trackiq
 /plugin install trackiq-amazon-rank-readiness@trackiq
+/plugin install trackiq-amazon-share-of-shelf@trackiq
 ```
 
 Installed this way, skills update themselves. Run
@@ -57,9 +58,12 @@ web, Claude desktop or ChatGPT — see the skill's own README.
 | [**TrackIQ: Amazon AMC Media Mix**](https://github.com/TrackIQ-HQ/trackiq-amazon-amc-media-mix) | A twelve-slide media mix deck — attribution paths, what DSP is worth, cost per new customer, one reallocation | TrackIQ MCP + AMC + DSP |
 | [**TrackIQ: Amazon Search Visibility Audit**](https://github.com/TrackIQ-HQ/trackiq-amazon-search-visibility-audit) | Where your ASINs appear in search — owned, doubled, bought or absent per query, plus the priced gap | TrackIQ MCP |
 | [**TrackIQ: Amazon Rank Readiness**](https://github.com/TrackIQ-HQ/trackiq-amazon-rank-readiness) | Which terms deserve PPC or seeding spend — tested on whether the rank would hold once the money stops | TrackIQ MCP |
+| [**TrackIQ: Amazon Share of Shelf**](https://github.com/TrackIQ-HQ/trackiq-amazon-share-of-shelf) | How much of page one you own for the keywords that earn, and who holds the rest | TrackIQ MCP **+ Oxylabs scraper** |
 
 Every skill degrades gracefully: with no connector attached, it asks you to
-paste the figures and builds from those.
+paste the figures and builds from those. The one exception is **Share of
+Shelf**, which needs a scraper connection for live search results and says so
+rather than approximating page one.
 
 Each skill lives in its own repository. This one holds only the catalog, the
 authoring standard, and the template for new skills.

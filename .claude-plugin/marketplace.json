@@ -156,6 +156,29 @@
         "conversion-rate",
         "trackiq"
       ]
+    },
+    {
+      "name": "trackiq-amazon-share-of-shelf",
+      "source": {
+        "source": "github",
+        "repo": "TrackIQ-HQ/trackiq-amazon-share-of-shelf"
+      },
+      "description": "TrackIQ: Amazon Share of Shelf \u2014 how much of page one a brand owns for its revenue-bearing keywords, and which competitors hold the rest. Weighted by revenue, not volume. Requires an Oxylabs scraper connection (1 credit per keyword per run); there is no first-party substitute.",
+      "version": "1.0.0",
+      "author": {
+        "name": "TrackIQ"
+      },
+      "homepage": "https://github.com/TrackIQ-HQ/trackiq-amazon-share-of-shelf",
+      "keywords": [
+        "amazon",
+        "amazon-seller",
+        "share-of-shelf",
+        "share-of-search",
+        "serp-tracking",
+        "competitor-analysis",
+        "seo",
+        "trackiq"
+      ]
     }
   ]
 }
