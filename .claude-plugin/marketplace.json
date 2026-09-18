@@ -84,6 +84,31 @@
         "seo",
         "trackiq"
       ]
+    },
+    {
+      "name": "trackiq-amazon-amc-media-mix",
+      "source": {
+        "source": "github",
+        "repo": "TrackIQ-HQ/trackiq-amazon-amc-media-mix"
+      },
+      "description": "TrackIQ: Amazon AMC Media Mix \u2014 a twelve-slide Amazon Marketing Cloud path-to-purchase and media mix deck. Which ad combinations recruit new customers, what DSP is worth alone versus in a path, cost per new customer by channel, and one budget reallocation with the arithmetic shown.",
+      "version": "1.0.0",
+      "author": {
+        "name": "TrackIQ"
+      },
+      "homepage": "https://github.com/TrackIQ-HQ/trackiq-amazon-amc-media-mix",
+      "keywords": [
+        "amazon",
+        "amazon-ads",
+        "amc",
+        "amazon-marketing-cloud",
+        "amazon-dsp",
+        "media-mix",
+        "path-to-purchase",
+        "attribution",
+        "new-to-brand",
+        "trackiq"
+      ]
     }
   ]
 }

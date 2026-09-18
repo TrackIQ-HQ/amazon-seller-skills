@@ -131,6 +131,50 @@
         "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-category-priority-keywords/releases/latest/download/trackiq-amazon-category-priority-keywords.zip",
         "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-category-priority-keywords/releases/latest/download/trackiq-amazon-category-priority-keywords-1.0.0.zip"
       }
+    },
+    {
+      "name": "trackiq-amazon-amc-media-mix",
+      "title": "TrackIQ: Amazon AMC Media Mix",
+      "version": "1.0.0",
+      "updated": "2026-09-18",
+      "summary": "A twelve-slide Amazon Marketing Cloud deck arguing one case \u2014 where the budget goes versus where new customers come from. Attribution paths, what DSP is worth alone versus in a path, cost per new customer by channel, time to purchase, and one reallocation with the arithmetic shown.",
+      "changelog": "First public release.",
+      "requires": {
+        "mcp": [
+          "trackiq"
+        ],
+        "tools": [
+          "list_marketplaces",
+          "get_amc_attribution_paths",
+          "get_amc_ntb_purchases",
+          "get_amc_time_to_conversion",
+          "get_account_overview",
+          "get_dsp_performance"
+        ],
+        "filesystem": false,
+        "network": false
+      },
+      "delivery": {
+        "methods": [
+          "in-chat",
+          "file",
+          "slack",
+          "n8n",
+          "email"
+        ],
+        "default": "in-chat",
+        "note": "in-chat always works and is the fallback. file needs a filesystem, n8n needs network, slack and email need their tool connected. Outward sends confirm first."
+      },
+      "fallback": "Works from exported AMC attribution-path, NTB-by-campaign and time-to-conversion tables plus monthly spend by channel. Slides 3-10 build from pasted figures; slide 11 records which pulls were manual.",
+      "homepage": "https://trackiq.com/skills/trackiq-amazon-amc-media-mix",
+      "license": "MIT",
+      "plugin": "trackiq-amazon-amc-media-mix",
+      "repository": "https://github.com/TrackIQ-HQ/trackiq-amazon-amc-media-mix",
+      "install": {
+        "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-amc-media-mix@trackiq",
+        "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-amc-media-mix/releases/latest/download/trackiq-amazon-amc-media-mix.zip",
+        "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-amc-media-mix/releases/latest/download/trackiq-amazon-amc-media-mix-1.0.0.zip"
+      }
     }
   ]
 }
