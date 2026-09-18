@@ -132,6 +132,30 @@
         "search-visibility",
         "trackiq"
       ]
+    },
+    {
+      "name": "trackiq-amazon-rank-readiness",
+      "source": {
+        "source": "github",
+        "repo": "TrackIQ-HQ/trackiq-amazon-rank-readiness"
+      },
+      "description": "TrackIQ: Amazon Rank Readiness \u2014 decides which search terms deserve advertising or seeding spend on an ASIN by testing whether a bought organic rank would hold once the money stops. FUND / SEED / TEST / NO-GO per keyword plus a designed HTML report.",
+      "version": "1.0.0",
+      "author": {
+        "name": "TrackIQ"
+      },
+      "homepage": "https://github.com/TrackIQ-HQ/trackiq-amazon-rank-readiness",
+      "keywords": [
+        "amazon",
+        "amazon-seller",
+        "amazon-ads",
+        "ppc",
+        "rank-and-bank",
+        "product-seeding",
+        "organic-rank",
+        "conversion-rate",
+        "trackiq"
+      ]
     }
   ]
 }
