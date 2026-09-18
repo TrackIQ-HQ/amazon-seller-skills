@@ -179,6 +179,29 @@
         "seo",
         "trackiq"
       ]
+    },
+    {
+      "name": "trackiq-amazon-listing-monitor",
+      "source": {
+        "source": "github",
+        "repo": "TrackIQ-HQ/trackiq-amazon-listing-monitor"
+      },
+      "description": "TrackIQ: Amazon Listing Monitor \u2014 watches listings daily and alerts only when something actually moved: title and bullet rewrites, lost images, missing A+, category moves, buy box changes, price and rating thresholds, suppressions. Silence is the normal output. Requires an Oxylabs scraper connection and snapshot storage.",
+      "version": "1.0.0",
+      "author": {
+        "name": "TrackIQ"
+      },
+      "homepage": "https://github.com/TrackIQ-HQ/trackiq-amazon-listing-monitor",
+      "keywords": [
+        "amazon",
+        "amazon-seller",
+        "listing-monitoring",
+        "suppression",
+        "buy-box",
+        "change-detection",
+        "monitoring",
+        "trackiq"
+      ]
     }
   ]
 }
