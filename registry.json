@@ -6,27 +6,37 @@
     {
       "id": "advertising",
       "label": "Amazon Advertising",
-      "blurb": "Where the ad money goes, and what it buys."
+      "blurb": "Where the ad money goes, and what it buys.",
+      "slug": "amazon-advertising",
+      "url": "https://trackiq.com/skills/amazon-advertising"
     },
     {
       "id": "search",
       "label": "Amazon Search & SEO",
-      "blurb": "Which terms to track, where you rank, and what the gap is worth."
+      "blurb": "Which terms to track, where you rank, and what the gap is worth.",
+      "slug": "amazon-search",
+      "url": "https://trackiq.com/skills/amazon-search"
     },
     {
       "id": "listing",
       "label": "Amazon Listing Management & Optimization",
-      "blurb": "Keeping listings intact, compliant and converting."
+      "blurb": "Keeping listings intact, compliant and converting.",
+      "slug": "amazon-listing",
+      "url": "https://trackiq.com/skills/amazon-listing"
     },
     {
       "id": "inventory",
       "label": "Amazon Inventory",
-      "blurb": "Cover, replenishment and the cost of running out."
+      "blurb": "Cover, replenishment and the cost of running out.",
+      "slug": "amazon-inventory",
+      "url": "https://trackiq.com/skills/amazon-inventory"
     },
     {
       "id": "operations",
       "label": "Amazon Management & Operations",
-      "blurb": "The reporting cadence a team actually runs on."
+      "blurb": "The reporting cadence a team actually runs on.",
+      "slug": "amazon-operations",
+      "url": "https://trackiq.com/skills/amazon-operations"
     }
   ],
   "skills": [
@@ -1142,5 +1152,6 @@
         "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-weekly-executive-report/releases/latest/download/trackiq-amazon-weekly-executive-report-1.0.0.zip"
       }
     }
-  ]
+  ],
+  "skills_page": "https://trackiq.com/skills"
 }
