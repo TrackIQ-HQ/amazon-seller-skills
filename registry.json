@@ -8,35 +8,115 @@
       "label": "Amazon Advertising",
       "blurb": "Where the ad money goes, and what it buys.",
       "slug": "amazon-advertising",
-      "url": "https://trackiq.com/skills/amazon-advertising"
+      "url": "https://trackiq.com/skills/amazon-advertising",
+      "icon": "ChartColumn",
+      "annotation": "Smarter advertising.\nBigger opportunities.",
+      "props": [
+        [
+          "ChartColumn",
+          "Turn ad data\ninto clear answers"
+        ],
+        [
+          "Users",
+          "Find opportunities\nto grow profitably"
+        ],
+        [
+          "Sparkles",
+          "Built for Amazon\nsellers & agencies"
+        ]
+      ]
     },
     {
       "id": "search",
       "label": "Amazon Search & SEO",
       "blurb": "Which terms to track, where you rank, and what the gap is worth.",
       "slug": "amazon-search",
-      "url": "https://trackiq.com/skills/amazon-search"
+      "url": "https://trackiq.com/skills/amazon-search",
+      "icon": "Search",
+      "annotation": "Know where you rank.\nAnd what it's worth.",
+      "props": [
+        [
+          "Search",
+          "Find the terms\nthat carry revenue"
+        ],
+        [
+          "TrendingUp",
+          "Track the rank\nthat moves sales"
+        ],
+        [
+          "Eye",
+          "See the gaps\nothers miss"
+        ]
+      ]
     },
     {
       "id": "listing",
       "label": "Amazon Listing Management & Optimization",
       "blurb": "Keeping listings intact, compliant and converting.",
       "slug": "amazon-listing",
-      "url": "https://trackiq.com/skills/amazon-listing"
+      "url": "https://trackiq.com/skills/amazon-listing",
+      "icon": "FileText",
+      "annotation": "Listings that stay\nintact and convert.",
+      "props": [
+        [
+          "ShieldCheck",
+          "Catch changes\nbefore they cost you"
+        ],
+        [
+          "FileText",
+          "Copy built on\nreal shopper terms"
+        ],
+        [
+          "Star",
+          "Learn from\nevery review"
+        ]
+      ]
     },
     {
       "id": "inventory",
       "label": "Amazon Inventory",
       "blurb": "Cover, replenishment and the cost of running out.",
       "slug": "amazon-inventory",
-      "url": "https://trackiq.com/skills/amazon-inventory"
+      "url": "https://trackiq.com/skills/amazon-inventory",
+      "icon": "Boxes",
+      "annotation": "Never run out.\nNever overbuy.",
+      "props": [
+        [
+          "Package",
+          "Know the cover\non every ASIN"
+        ],
+        [
+          "Truck",
+          "Order at the\nright time"
+        ],
+        [
+          "Wallet",
+          "Free up capital\nsitting still"
+        ]
+      ]
     },
     {
       "id": "operations",
       "label": "Amazon Management & Operations",
       "blurb": "The reporting cadence a team actually runs on.",
       "slug": "amazon-operations",
-      "url": "https://trackiq.com/skills/amazon-operations"
+      "url": "https://trackiq.com/skills/amazon-operations",
+      "icon": "Settings",
+      "annotation": "The numbers your\nteam runs on.",
+      "props": [
+        [
+          "Mail",
+          "Reports that land\non schedule"
+        ],
+        [
+          "ChartColumn",
+          "Every number\nreconciled"
+        ],
+        [
+          "ListChecks",
+          "Decisions, not\njust dashboards"
+        ]
+      ]
     }
   ],
   "skills": [
@@ -158,7 +238,47 @@
           "title": "AMC enabled, DSP running",
           "text": "Amazon Marketing Cloud on the account with DSP spend. Without DSP there is no mix to analyse."
         },
-        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-amc-media-mix/main/.github/page/hero.png"
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-amc-media-mix/main/.github/page/hero.png",
+        "mini": {
+          "k": "kpis",
+          "t": "Media Mix Overview",
+          "kpis": [
+            [
+              "$143.3K",
+              "Total Spend"
+            ],
+            [
+              "3,580",
+              "New Customers"
+            ],
+            [
+              "$40.03",
+              "Cost per New"
+            ],
+            [
+              "4.5x",
+              "ROAS"
+            ]
+          ],
+          "bars": [
+            [
+              94,
+              56
+            ],
+            [
+              20,
+              38
+            ],
+            [
+              20,
+              10
+            ],
+            [
+              10,
+              13
+            ]
+          ]
+        }
       }
     },
     {
@@ -277,7 +397,39 @@
           "title": "The month's plan",
           "text": "Your spend target, plus a sales or ACOS target if you have one. It is not in the API, so the skill asks."
         },
-        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-budget-pacing/main/.github/page/hero.png"
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-budget-pacing/main/.github/page/hero.png",
+        "mini": {
+          "k": "progress",
+          "t": "Budget Pacing",
+          "legend": [
+            "Actual",
+            "Projected",
+            "Plan"
+          ],
+          "side": "Pacing by Portfolio",
+          "bars": [
+            [
+              "Patio Lighting",
+              86,
+              "g"
+            ],
+            [
+              "Fire Pits",
+              64,
+              "o"
+            ],
+            [
+              "Grill",
+              38,
+              "w"
+            ],
+            [
+              "Deck Furniture",
+              52,
+              "s"
+            ]
+          ]
+        }
       }
     },
     {
@@ -394,7 +546,51 @@
           "title": "A DSP account with spend",
           "text": "Not every account runs DSP. The skill checks for spend in the window before promising a report."
         },
-        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-dsp-performance/main/.github/page/hero.png"
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-dsp-performance/main/.github/page/hero.png",
+        "mini": {
+          "k": "kpis",
+          "t": "DSP Performance",
+          "tabs": [
+            "Audience",
+            "Creative",
+            "Geography",
+            "Inventory"
+          ],
+          "kpis": [
+            [
+              "891",
+              "New-to-brand",
+              "\u25b2 18%"
+            ],
+            [
+              "$46.22",
+              "Cost per NTB",
+              "\u25bc 9%",
+              "g"
+            ],
+            [
+              "$41.2K",
+              "Spend",
+              "\u25b2 4%",
+              "n"
+            ],
+            [
+              "5",
+              "Segments"
+            ]
+          ],
+          "bars": [
+            100,
+            82,
+            55,
+            22,
+            20,
+            64,
+            48,
+            36,
+            28
+          ]
+        }
       }
     },
     {
@@ -513,7 +709,60 @@
           "title": "A break-even ROAS",
           "text": "Gross margin into one. Without it the skill can say what converts, not what is worth promoting."
         },
-        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-search-term-harvester/main/.github/page/hero.png"
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-search-term-harvester/main/.github/page/hero.png",
+        "mini": {
+          "k": "table",
+          "t": "Search-Term Opportunities",
+          "cols": [
+            "Search Term",
+            "Orders",
+            "Sales",
+            "ROAS",
+            "Action"
+          ],
+          "rows": [
+            [
+              "solar string lights outdoor",
+              "14",
+              "$1,190",
+              "6.5x",
+              [
+                "Add Exact",
+                "g"
+              ]
+            ],
+            [
+              "edison bulb patio lights",
+              "9",
+              "$812",
+              "5.5x",
+              [
+                "Add Exact",
+                "g"
+              ]
+            ],
+            [
+              "smokeless fire pit for patio",
+              "6",
+              "$894",
+              "5.2x",
+              [
+                "Add Exact",
+                "g"
+              ]
+            ],
+            [
+              "string lights for gazebo",
+              "5",
+              "$428",
+              "5.4x",
+              [
+                "Add Exact",
+                "g"
+              ]
+            ]
+          ]
+        }
       }
     },
     {
@@ -644,7 +893,60 @@
           "title": "A break-even ROAS",
           "text": "Every verdict depends on it. It comes from product margin and is not in the MCP, so the skill asks."
         },
-        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-wasted-spend/main/.github/page/hero.png"
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-wasted-spend/main/.github/page/hero.png",
+        "mini": {
+          "k": "table",
+          "t": "Wasted Spend Opportunities",
+          "cols": [
+            "Keyword",
+            "Spend",
+            "Orders",
+            "ROAS",
+            "Rec."
+          ],
+          "rows": [
+            [
+              "grill accessories",
+              "$640",
+              "5",
+              "0.8x",
+              [
+                "Cut Bid",
+                "w"
+              ]
+            ],
+            [
+              "patio furniture cover",
+              "$410",
+              "3",
+              "0.8x",
+              [
+                "Cut Bid",
+                "w"
+              ]
+            ],
+            [
+              "led candles",
+              "$148",
+              "0",
+              "\u2014",
+              [
+                "Negate",
+                "r"
+              ]
+            ],
+            [
+              "christmas lights indoor",
+              "$131",
+              "0",
+              "\u2014",
+              [
+                "Negate",
+                "r"
+              ]
+            ]
+          ]
+        }
       }
     },
     {
@@ -764,7 +1066,60 @@
           "title": "Search Query Performance data",
           "text": "SQP ingestion running on the account. It is often sparse on newer brands, so the skill checks first."
         },
-        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-category-priority-keywords/main/.github/page/hero.png"
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-category-priority-keywords/main/.github/page/hero.png",
+        "mini": {
+          "k": "table",
+          "t": "Priority Terms \u00b7 Patio Lighting",
+          "cols": [
+            "Term",
+            "Volume",
+            "Revenue",
+            "Share",
+            "Action"
+          ],
+          "rows": [
+            [
+              "outdoor string lights",
+              "46,000",
+              "$26,500",
+              "18.2%",
+              [
+                "Defend",
+                "g"
+              ]
+            ],
+            [
+              "patio string lights",
+              "30,250",
+              "$15,700",
+              "14.6%",
+              [
+                "Defend",
+                "g"
+              ]
+            ],
+            [
+              "solar string lights",
+              "24,380",
+              "$7,220",
+              "6.1%",
+              [
+                "Grow",
+                "w"
+              ]
+            ],
+            [
+              "globe string lights",
+              "7,410",
+              "$2,000",
+              "7.2%",
+              [
+                "Watch",
+                "n"
+              ]
+            ]
+          ]
+        }
       }
     },
     {
@@ -885,7 +1240,60 @@
           "title": "Last week's run",
           "text": "Movement compares against the previous run's saved file. The first run sets the baseline."
         },
-        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-rank-movement/main/.github/page/hero.png"
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-rank-movement/main/.github/page/hero.png",
+        "mini": {
+          "k": "table",
+          "t": "Rank Movement",
+          "cols": [
+            "Keyword",
+            "Was",
+            "Now",
+            "Page",
+            "Value"
+          ],
+          "rows": [
+            [
+              "outdoor string lights",
+              "8",
+              "12",
+              "1 \u2192 2",
+              [
+                "\u2212$2,120",
+                "r"
+              ]
+            ],
+            [
+              "fire pit table",
+              "11",
+              "7",
+              "2 \u2192 1",
+              [
+                "+$1,180",
+                "g"
+              ]
+            ],
+            [
+              "solar string lights",
+              "14",
+              "9",
+              "2 \u2192 1",
+              [
+                "+$690",
+                "g"
+              ]
+            ],
+            [
+              "grill mat",
+              "9",
+              "14",
+              "1 \u2192 2",
+              [
+                "\u2212$410",
+                "r"
+              ]
+            ]
+          ]
+        }
       }
     },
     {
@@ -1006,7 +1414,60 @@
           "title": "One ASIN and its context",
           "text": "Price, rating, reviews and days of cover. Optional, but they state the two hard gates."
         },
-        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-rank-readiness/main/.github/page/hero.png"
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-rank-readiness/main/.github/page/hero.png",
+        "mini": {
+          "k": "table",
+          "t": "Rank Readiness",
+          "cols": [
+            "Keyword",
+            "Rank",
+            "vs Mkt",
+            "Pool/yr",
+            "Verdict"
+          ],
+          "rows": [
+            [
+              "patio string lights",
+              "4",
+              "1.16x",
+              "$1.90M",
+              [
+                "Fund",
+                "g"
+              ]
+            ],
+            [
+              "waterproof string lights",
+              "\u2014",
+              "1.22x",
+              "$839K",
+              [
+                "Fund",
+                "g"
+              ]
+            ],
+            [
+              "edison bulb string lights",
+              "12",
+              "1.30x",
+              "$519K",
+              [
+                "Seed",
+                "w"
+              ]
+            ],
+            [
+              "solar string lights",
+              "22",
+              "0.70x",
+              "$1.12M",
+              [
+                "No-go",
+                "r"
+              ]
+            ]
+          ]
+        }
       }
     },
     {
@@ -1129,7 +1590,47 @@
           "title": "Rank tracking set up",
           "text": "Tracked keywords in TrackIQ. Untracked queries are reported separately, never as not ranking."
         },
-        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-search-visibility-audit/main/.github/page/hero.png"
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-search-visibility-audit/main/.github/page/hero.png",
+        "mini": {
+          "k": "kpis",
+          "t": "Search Visibility",
+          "kpis": [
+            [
+              "204",
+              "Queries"
+            ],
+            [
+              "41",
+              "Owned"
+            ],
+            [
+              "30",
+              "Paid & Ranked"
+            ],
+            [
+              "$23.0K",
+              "Gap / Month"
+            ]
+          ],
+          "bars": [
+            [
+              100,
+              91
+            ],
+            [
+              41,
+              73
+            ],
+            [
+              18,
+              86
+            ],
+            [
+              27,
+              32
+            ]
+          ]
+        }
       }
     },
     {
@@ -1250,7 +1751,47 @@
           "title": "A keyword basket",
           "text": "Run Category Priority Keywords first so every term carries a revenue figure."
         },
-        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-share-of-shelf/main/.github/page/hero.png"
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-share-of-shelf/main/.github/page/hero.png",
+        "mini": {
+          "k": "kpis",
+          "t": "Share of Shelf",
+          "kpis": [
+            [
+              "34%",
+              "Page-one Share"
+            ],
+            [
+              "14",
+              "Keywords Led"
+            ],
+            [
+              "6",
+              "Amazon's Choice"
+            ],
+            [
+              "$31.4K",
+              "Gap / Month"
+            ]
+          ],
+          "bars": [
+            [
+              88,
+              60
+            ],
+            [
+              62,
+              74
+            ],
+            [
+              40,
+              90
+            ],
+            [
+              30,
+              52
+            ]
+          ]
+        }
       }
     },
     {
@@ -1373,7 +1914,60 @@
           "title": "An agreed scope",
           "text": "Page checks cost one scraper credit per ASIN, so the catalogue scope is agreed first."
         },
-        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-catalog-hygiene/main/.github/page/hero.png"
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-catalog-hygiene/main/.github/page/hero.png",
+        "mini": {
+          "k": "table",
+          "t": "Catalog Defects",
+          "cols": [
+            "Defect",
+            "Items",
+            "Revenue",
+            "At Risk",
+            "Severity"
+          ],
+          "rows": [
+            [
+              "Title over 200 characters",
+              "11",
+              "$28,600",
+              "$5,720",
+              [
+                "High",
+                "r"
+              ]
+            ],
+            [
+              "Fewer than 6 images",
+              "23",
+              "$41,200",
+              "$4,120",
+              [
+                "Medium",
+                "w"
+              ]
+            ],
+            [
+              "Missing size or colour",
+              "14",
+              "$19,800",
+              "$2,970",
+              [
+                "Medium",
+                "w"
+              ]
+            ],
+            [
+              "No A+ content",
+              "9",
+              "$12,300",
+              "$620",
+              [
+                "Low",
+                "n"
+              ]
+            ]
+          ]
+        }
       }
     },
     {
@@ -1495,7 +2089,60 @@
           "title": "A competitor set",
           "text": "Three to five competitor ASINs. Ask, or take them from Share of Shelf."
         },
-        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-competitor-teardown/main/.github/page/hero.png"
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-competitor-teardown/main/.github/page/hero.png",
+        "mini": {
+          "k": "table",
+          "t": "Listing Teardown",
+          "cols": [
+            "Measure",
+            "Ours",
+            "Comp. A",
+            "Comp. B",
+            "Gap"
+          ],
+          "rows": [
+            [
+              "Price per foot",
+              "$0.79",
+              "$0.94",
+              "$0.71",
+              [
+                "Hold",
+                "n"
+              ]
+            ],
+            [
+              "Reviews",
+              "1,240",
+              "6,800",
+              "3,150",
+              [
+                "Grow",
+                "w"
+              ]
+            ],
+            [
+              "Images",
+              "5",
+              "9",
+              "8",
+              [
+                "Add",
+                "r"
+              ]
+            ],
+            [
+              "Video",
+              "No",
+              "Yes",
+              "Yes",
+              [
+                "Add",
+                "r"
+              ]
+            ]
+          ]
+        }
       }
     },
     {
@@ -1606,7 +2253,60 @@
           "title": "Snapshot storage",
           "text": "It's a diff, so dated snapshots are kept between daily runs. The first run only sets a baseline."
         },
-        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-listing-monitor/main/.github/page/hero.png"
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-listing-monitor/main/.github/page/hero.png",
+        "mini": {
+          "k": "table",
+          "t": "Listing Changes",
+          "cols": [
+            "ASIN",
+            "Change",
+            "Before",
+            "After",
+            "Level"
+          ],
+          "rows": [
+            [
+              "B0DEMO0101",
+              "Title",
+              "\u2026string lights\u2026",
+              "\u2026patio lights\u2026",
+              [
+                "Alert",
+                "r"
+              ]
+            ],
+            [
+              "B0DEMO0205",
+              "Main image",
+              "White",
+              "Text overlay",
+              [
+                "Alert",
+                "r"
+              ]
+            ],
+            [
+              "B0DEMO0101",
+              "Price",
+              "$37.99",
+              "$41.99",
+              [
+                "Watch",
+                "w"
+              ]
+            ],
+            [
+              "B0DEMO0205",
+              "Bullets",
+              "5",
+              "4",
+              [
+                "Watch",
+                "w"
+              ]
+            ]
+          ]
+        }
       }
     },
     {
@@ -1740,7 +2440,60 @@
           "title": "One listing to rewrite",
           "text": "The ASIN to work on. Current backend terms aren't in any tool, so they're checked by hand."
         },
-        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-listing-optimizer/main/.github/page/hero.png"
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-listing-optimizer/main/.github/page/hero.png",
+        "mini": {
+          "k": "table",
+          "t": "Copy Changes",
+          "cols": [
+            "Term",
+            "Orders",
+            "Volume",
+            "Placed",
+            "Status"
+          ],
+          "rows": [
+            [
+              "outdoor string lights",
+              "690",
+              "46,000",
+              "Title",
+              [
+                "Added",
+                "g"
+              ]
+            ],
+            [
+              "patio string lights",
+              "410",
+              "30,250",
+              "Title",
+              [
+                "Kept",
+                "n"
+              ]
+            ],
+            [
+              "waterproof string lights",
+              "48",
+              "7,800",
+              "Bullet 3",
+              [
+                "Added",
+                "g"
+              ]
+            ],
+            [
+              "\u201cbest outdoor lights\u201d",
+              "\u2014",
+              "\u2014",
+              "Title",
+              [
+                "Removed",
+                "r"
+              ]
+            ]
+          ]
+        }
       }
     },
     {
@@ -1874,7 +2627,51 @@
           "title": "A competitor set",
           "text": "Three to five competitor ASINs to sample against your own catalogue."
         },
-        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-review-miner/main/.github/page/hero.png"
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-review-miner/main/.github/page/hero.png",
+        "mini": {
+          "k": "kpis",
+          "t": "Review Themes",
+          "kpis": [
+            [
+              "4.6",
+              "Rating"
+            ],
+            [
+              "1,240",
+              "Reviews"
+            ],
+            [
+              "5",
+              "Themes"
+            ],
+            [
+              "2",
+              "New Themes"
+            ]
+          ],
+          "bars": [
+            [
+              100,
+              97
+            ],
+            [
+              18,
+              17
+            ],
+            [
+              5,
+              7
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              5,
+              8
+            ]
+          ]
+        }
       }
     },
     {
@@ -1992,7 +2789,39 @@
           "title": "Lead time & service level",
           "text": "Defaults of 45 days and 95%, labelled as assumptions if you don't supply them."
         },
-        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-demand-forecast/main/.github/page/hero.png"
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-demand-forecast/main/.github/page/hero.png",
+        "mini": {
+          "k": "progress",
+          "t": "Demand Forecast",
+          "legend": [
+            "Actual",
+            "Forecast",
+            "Last year"
+          ],
+          "side": "Cover after orders",
+          "bars": [
+            [
+              "48ft String Lights",
+              82,
+              "g"
+            ],
+            [
+              "Smokeless Fire Pit",
+              58,
+              "w"
+            ],
+            [
+              "Solar String Lights",
+              90,
+              "g"
+            ],
+            [
+              "Fire Pit Cover",
+              34,
+              "r"
+            ]
+          ]
+        }
       }
     },
     {
@@ -2111,7 +2940,60 @@
           "title": "Unit cost",
           "text": "What you paid per unit, to value capital tied up. Without it, stock is valued at selling price."
         },
-        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-excess-inventory/main/.github/page/hero.png"
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-excess-inventory/main/.github/page/hero.png",
+        "mini": {
+          "k": "table",
+          "t": "Excess Inventory",
+          "cols": [
+            "Product",
+            "On Hand",
+            "Cover",
+            "Capital",
+            "Action"
+          ],
+          "rows": [
+            [
+              "Patio Heater Cover",
+              "1,150",
+              "493d",
+              "$8,460",
+              [
+                "Clear",
+                "r"
+              ]
+            ],
+            [
+              "Grill Brush 3-pack",
+              "2,300",
+              "339d",
+              "$6,080",
+              [
+                "Clear",
+                "r"
+              ]
+            ],
+            [
+              "Solar String Lights",
+              "1,900",
+              "134d",
+              "$6,820",
+              [
+                "Hold",
+                "n"
+              ]
+            ],
+            [
+              "Citronella Candles",
+              "860",
+              "\u2014",
+              "$3,440",
+              [
+                "Fix Listing",
+                "w"
+              ]
+            ]
+          ]
+        }
       }
     },
     {
@@ -2231,7 +3113,60 @@
           "title": "A lead time",
           "text": "Days from purchase order to sellable. Defaults to 45, labelled an assumption."
         },
-        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-inventory-ad-throttle/main/.github/page/hero.png"
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-inventory-ad-throttle/main/.github/page/hero.png",
+        "mini": {
+          "k": "table",
+          "t": "Ad Throttle",
+          "cols": [
+            "Product",
+            "Cover",
+            "Spend",
+            "Rung",
+            "Action"
+          ],
+          "rows": [
+            [
+              "Smokeless Fire Pit",
+              "0d",
+              "$3,200",
+              "Out",
+              [
+                "Pause",
+                "r"
+              ]
+            ],
+            [
+              "48ft String Lights",
+              "22d",
+              "$8,900",
+              "< 30d",
+              [
+                "Cut 30%",
+                "w"
+              ]
+            ],
+            [
+              "Fire Pit Cover",
+              "53d",
+              "$600",
+              "> 45d",
+              [
+                "None",
+                "n"
+              ]
+            ],
+            [
+              "Solar String Lights",
+              "134d",
+              "$4,800",
+              "Fund",
+              [
+                "+$1,400",
+                "g"
+              ]
+            ]
+          ]
+        }
       }
     },
     {
@@ -2349,7 +3284,39 @@
           "title": "A lead time",
           "text": "Without it the report can say when stock runs out, but not when to order."
         },
-        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-restock-priority/main/.github/page/hero.png"
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-restock-priority/main/.github/page/hero.png",
+        "mini": {
+          "k": "progress",
+          "t": "Restock Priority",
+          "legend": [
+            "On hand",
+            "Forecast",
+            "Reorder point"
+          ],
+          "side": "Days of cover",
+          "bars": [
+            [
+              "Smokeless Fire Pit",
+              3,
+              "r"
+            ],
+            [
+              "48ft String Lights",
+              37,
+              "w"
+            ],
+            [
+              "Fire Pit Cover",
+              88,
+              "o"
+            ],
+            [
+              "Solar String Lights",
+              100,
+              "g"
+            ]
+          ]
+        }
       }
     },
     {
@@ -2471,7 +3438,40 @@
           "title": "The stockout window",
           "text": "When the ASIN went to zero and when it came back. The snapshot only shows today."
         },
-        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-stockout-impact/main/.github/page/hero.png"
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-stockout-impact/main/.github/page/hero.png",
+        "mini": {
+          "k": "kpis",
+          "t": "Stockout Impact",
+          "kpis": [
+            [
+              "14 days",
+              "Out of Stock"
+            ],
+            [
+              "\u2212$20.3K",
+              "Gross Cost"
+            ],
+            [
+              "\u2212$13.0K",
+              "Net Cost"
+            ],
+            [
+              "6 \u2192 19",
+              "Rank"
+            ]
+          ],
+          "bars": [
+            70,
+            68,
+            64,
+            60,
+            6,
+            4,
+            32,
+            40,
+            52
+          ]
+        }
       }
     },
     {
@@ -2590,7 +3590,44 @@
           "title": "Your lines and hero ASINs",
           "text": "Set once in account.md \u2014 the product lines and heroes the email ranks and tracks."
         },
-        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-daily-snacks-email/main/.github/page/hero.png"
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-daily-snacks-email/main/.github/page/hero.png",
+        "mini": {
+          "k": "kpis",
+          "t": "Daily Snacks",
+          "kpis": [
+            [
+              "$22,324",
+              "Retail \u00b7 Sat",
+              "\u25b2 4.8%"
+            ],
+            [
+              "$5,942",
+              "Ad Spend",
+              "\u25b2 8.9%",
+              "n"
+            ],
+            [
+              "$159.8K",
+              "Retail \u00b7 7 Days",
+              "\u25b2 19.3%"
+            ],
+            [
+              "27.4%",
+              "TACoS",
+              "\u25bc 0.6pp",
+              "g"
+            ]
+          ],
+          "bars": [
+            62,
+            70,
+            66,
+            74,
+            80,
+            86,
+            94
+          ]
+        }
       }
     },
     {
@@ -2711,7 +3748,39 @@
           "title": "Launch date & a target",
           "text": "Units or revenue by week twelve. Without a target there's no scorecard, only a chart."
         },
-        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-launch-scorecard/main/.github/page/hero.png"
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-launch-scorecard/main/.github/page/hero.png",
+        "mini": {
+          "k": "progress",
+          "t": "Launch Scorecard",
+          "legend": [
+            "Units",
+            "Target",
+            "TACoS glide"
+          ],
+          "side": "Week 8 grades",
+          "bars": [
+            [
+              "Units vs plan",
+              74,
+              "w"
+            ],
+            [
+              "Session growth",
+              88,
+              "g"
+            ],
+            [
+              "Conversion",
+              56,
+              "r"
+            ],
+            [
+              "TACoS vs glide",
+              60,
+              "w"
+            ]
+          ]
+        }
       }
     },
     {
@@ -2832,7 +3901,53 @@
           "title": "Your account set up once",
           "text": "Brand, marketplace and product lines in account.md \u2014 shared by every TrackIQ skill."
         },
-        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-monthly-business-review/main/.github/page/hero.png"
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-monthly-business-review/main/.github/page/hero.png",
+        "mini": {
+          "k": "kpis",
+          "t": "Monthly Review \u00b7 August",
+          "kpis": [
+            [
+              "$412.6K",
+              "Revenue",
+              "\u25b2 8.1%"
+            ],
+            [
+              "$61.4K",
+              "Ad Spend",
+              "\u25b2 3.2%",
+              "n"
+            ],
+            [
+              "29.4%",
+              "ACOS",
+              "\u25bc 1.4pt",
+              "g"
+            ],
+            [
+              "9,840",
+              "Units",
+              "\u25b2 6.5%"
+            ]
+          ],
+          "bars": [
+            [
+              80,
+              70
+            ],
+            [
+              86,
+              74
+            ],
+            [
+              92,
+              78
+            ],
+            [
+              100,
+              82
+            ]
+          ]
+        }
       }
     },
     {
@@ -2950,7 +4065,60 @@
           "title": "Two periods to compare",
           "text": "The same length and the same weekdays \u2014 the skill checks before it decomposes."
         },
-        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-sales-movers/main/.github/page/hero.png"
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-sales-movers/main/.github/page/hero.png",
+        "mini": {
+          "k": "table",
+          "t": "Sales Movers",
+          "cols": [
+            "Product",
+            "Now",
+            "Moved",
+            "%",
+            "Cause"
+          ],
+          "rows": [
+            [
+              "Smokeless Fire Pit",
+              "$12,100",
+              "\u2212$9,700",
+              "\u221244%",
+              [
+                "Conversion",
+                "r"
+              ]
+            ],
+            [
+              "48ft String Lights",
+              "$44,100",
+              "\u2212$8,500",
+              "\u221216%",
+              [
+                "Traffic",
+                "r"
+              ]
+            ],
+            [
+              "Solar String Lights",
+              "$18,900",
+              "+$5,700",
+              "+43%",
+              [
+                "Traffic",
+                "g"
+              ]
+            ],
+            [
+              "Fire Pit Table",
+              "$9,800",
+              "+$2,700",
+              "+38%",
+              [
+                "Traffic",
+                "g"
+              ]
+            ]
+          ]
+        }
       }
     },
     {
@@ -3071,7 +4239,52 @@
           "title": "Lines and inventory bands",
           "text": "Set once in account.md \u2014 how ASINs group into lines and your days-of-cover thresholds."
         },
-        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-weekly-executive-report/main/.github/page/hero.png"
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-weekly-executive-report/main/.github/page/hero.png",
+        "mini": {
+          "k": "kpis",
+          "t": "Weekly Executive Report",
+          "kpis": [
+            [
+              "$412,780",
+              "Retail",
+              "\u25b2 3.2%"
+            ],
+            [
+              "$61,940",
+              "Ad Spend",
+              "\u25b2 0.6%",
+              "n"
+            ],
+            [
+              "15.0%",
+              "TACoS",
+              "\u25bc 0.3pp",
+              "g"
+            ],
+            [
+              "$403.2K",
+              "4-Week Avg"
+            ]
+          ],
+          "bars": [
+            [
+              92,
+              88
+            ],
+            [
+              96,
+              90
+            ],
+            [
+              94,
+              93
+            ],
+            [
+              100,
+              95
+            ]
+          ]
+        }
       }
     }
   ],
