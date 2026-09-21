@@ -83,6 +83,82 @@
         "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-amc-media-mix@trackiq",
         "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-amc-media-mix/releases/latest/download/trackiq-amazon-amc-media-mix.zip",
         "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-amc-media-mix/releases/latest/download/trackiq-amazon-amc-media-mix-1.0.0.zip"
+      },
+      "page": {
+        "annotation": "Turn AMC data into clearer decisions.",
+        "overview": "Turns three months of Amazon Marketing Cloud paths into one argument: where the budget goes versus where new customers actually come from.",
+        "features": [
+          {
+            "icon": "ChartPie",
+            "title": "Maps the whole media mix",
+            "text": "Sponsored Products, Brands, Display and DSP read as one path, not four reports."
+          },
+          {
+            "icon": "Route",
+            "title": "Shows the touch ladder",
+            "text": "What each extra ad touch does to conversion, ROAS and new-to-brand share."
+          },
+          {
+            "icon": "Users",
+            "title": "Prices every new customer",
+            "text": "One cost-per-new-customer definition applied across every channel."
+          },
+          {
+            "icon": "Clock",
+            "title": "Measures time to purchase",
+            "text": "Sets your attribution window and how early to fund a Prime Day."
+          },
+          {
+            "icon": "ArrowRightLeft",
+            "title": "Ends in one reallocation",
+            "text": "A single budget move with the arithmetic and confidence shown."
+          }
+        ],
+        "examples": [
+          {
+            "title": "The DSP question",
+            "text": "DSP alone versus inside a converting path \u2014 and what the data does not say.",
+            "crop": [
+              48,
+              44,
+              416,
+              236
+            ],
+            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-amc-media-mix/main/.github/page/ex-1.png"
+          },
+          {
+            "title": "Cost of a new customer",
+            "text": "One definition across every channel, cheapest recruiter first.",
+            "crop": [
+              492,
+              44,
+              416,
+              236
+            ],
+            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-amc-media-mix/main/.github/page/ex-2.png"
+          },
+          {
+            "title": "The recommendation",
+            "text": "Each proposed move with its arithmetic, assumption and confidence.",
+            "crop": [
+              936,
+              44,
+              416,
+              236
+            ],
+            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-amc-media-mix/main/.github/page/ex-3.png"
+          }
+        ],
+        "preview": {
+          "w": 1400,
+          "h": 324
+        },
+        "prerequisite": {
+          "icon": "Database",
+          "title": "AMC enabled, DSP running",
+          "text": "Amazon Marketing Cloud on the account with DSP spend. Without DSP there is no mix to analyse."
+        },
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-amc-media-mix/main/.github/page/hero.png"
       }
     },
     {
@@ -126,6 +202,82 @@
         "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-budget-pacing@trackiq",
         "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-budget-pacing/releases/latest/download/trackiq-amazon-budget-pacing.zip",
         "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-budget-pacing/releases/latest/download/trackiq-amazon-budget-pacing-1.0.0.zip"
+      },
+      "page": {
+        "annotation": "Know where the month lands \u2014 before it does.",
+        "overview": "A mid-month read on ad spend against the plan, with a day-weighted projection and a budget move that actually balances.",
+        "features": [
+          {
+            "icon": "Gauge",
+            "title": "Tracks spend against the plan",
+            "text": "Month-to-date spend versus your target, with the gap in dollars."
+          },
+          {
+            "icon": "CalendarRange",
+            "title": "Projects by day of week",
+            "text": "Each remaining day weighted by how that weekday has actually spent."
+          },
+          {
+            "icon": "Ban",
+            "title": "Finds portfolios capping out",
+            "text": "Budgets that stop serving before the day is over."
+          },
+          {
+            "icon": "TrendingDown",
+            "title": "Flags underdelivery",
+            "text": "Portfolios below their share of spend that are efficient enough to fund."
+          },
+          {
+            "icon": "ArrowRightLeft",
+            "title": "Reallocates, never just cuts",
+            "text": "Every increase funded by a named decrease, capped at 20% a portfolio."
+          }
+        ],
+        "examples": [
+          {
+            "title": "The verdict",
+            "text": "Month to date, projected and plan side by side, and why the projection is day-weighted.",
+            "crop": [
+              48,
+              48,
+              416,
+              303
+            ],
+            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-budget-pacing/main/.github/page/ex-1.png"
+          },
+          {
+            "title": "Capping out and underdelivering",
+            "text": "Portfolios that stop serving early, and efficient ones short of budget.",
+            "crop": [
+              492,
+              48,
+              416,
+              303
+            ],
+            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-budget-pacing/main/.github/page/ex-2.png"
+          },
+          {
+            "title": "The reallocation",
+            "text": "Moves that net to zero, each within 20% of its source portfolio.",
+            "crop": [
+              936,
+              48,
+              416,
+              303
+            ],
+            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-budget-pacing/main/.github/page/ex-3.png"
+          }
+        ],
+        "preview": {
+          "w": 1400,
+          "h": 399
+        },
+        "prerequisite": {
+          "icon": "Target",
+          "title": "The month's plan",
+          "text": "Your spend target, plus a sales or ACOS target if you have one. It is not in the API, so the skill asks."
+        },
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-budget-pacing/main/.github/page/hero.png"
       }
     },
     {
@@ -167,6 +319,78 @@
         "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-dsp-performance@trackiq",
         "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-dsp-performance/releases/latest/download/trackiq-amazon-dsp-performance.zip",
         "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-dsp-performance/releases/latest/download/trackiq-amazon-dsp-performance-1.0.0.zip"
+      },
+      "page": {
+        "annotation": "See which audiences actually recruit.",
+        "overview": "Breaks Amazon DSP down by audience, creative, inventory, technology and geography, ranked on new-to-brand rather than ROAS.",
+        "features": [
+          {
+            "icon": "Users",
+            "title": "Ranks audiences by recruitment",
+            "text": "Cost per new-to-brand purchase against the median of each dimension."
+          },
+          {
+            "icon": "Layers",
+            "title": "Covers every dimension",
+            "text": "Audience, creative, inventory source, technology and geography."
+          },
+          {
+            "icon": "Filter",
+            "title": "Shows where the funnel breaks",
+            "text": "Page views without add-to-carts read as a listing problem, not a bad segment."
+          },
+          {
+            "icon": "Copy",
+            "title": "Catches overlapping segments",
+            "text": "Segments that share the same impressions counted as one finding."
+          },
+          {
+            "icon": "Scissors",
+            "title": "Ends in scale, fix or cut",
+            "text": "Three short lists. Everything else stays quiet."
+          }
+        ],
+        "examples": [
+          {
+            "title": "The cover",
+            "text": "Cost per new-to-brand, NTB purchases, page views and segments below the floor.",
+            "crop": [
+              48,
+              48,
+              416,
+              301
+            ]
+          },
+          {
+            "title": "By audience",
+            "text": "Each segment ranked on cost per new-to-brand, with overlaps grouped.",
+            "crop": [
+              492,
+              48,
+              416,
+              301
+            ]
+          },
+          {
+            "title": "Scale, fix, cut",
+            "text": "The actions, then why DSP revenue is not reported at these dimensions.",
+            "crop": [
+              936,
+              48,
+              416,
+              301
+            ]
+          }
+        ],
+        "preview": {
+          "w": 1400,
+          "h": 397
+        },
+        "prerequisite": {
+          "icon": "Database",
+          "title": "A DSP account with spend",
+          "text": "Not every account runs DSP. The skill checks for spend in the window before promising a report."
+        }
       }
     },
     {
@@ -210,6 +434,78 @@
         "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-search-term-harvester@trackiq",
         "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-search-term-harvester/releases/latest/download/trackiq-amazon-search-term-harvester.zip",
         "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-search-term-harvester/releases/latest/download/trackiq-amazon-search-term-harvester-1.0.0.zip"
+      },
+      "page": {
+        "annotation": "Promote the terms already paying their way.",
+        "overview": "Finds search terms that convert above break-even with no keyword of their own, and turns them into an upload-ready bulk file.",
+        "features": [
+          {
+            "icon": "Search",
+            "title": "Finds proven converters",
+            "text": "Search terms earning above break-even with no dedicated keyword."
+          },
+          {
+            "icon": "ShieldCheck",
+            "title": "Checks against existing targets",
+            "text": "Nothing already targeted is proposed twice."
+          },
+          {
+            "icon": "Crosshair",
+            "title": "Promotes on orders, not clicks",
+            "text": "Only terms with real orders behind them make the list."
+          },
+          {
+            "icon": "Target",
+            "title": "Suggests a bid",
+            "text": "Derived from each term's own order value and conversion, floored and capped."
+          },
+          {
+            "icon": "FileSpreadsheet",
+            "title": "Writes the bulk file",
+            "text": "Exact-match keywords with the destination campaign and ad group attached."
+          }
+        ],
+        "examples": [
+          {
+            "title": "The cover",
+            "text": "Terms proposed, the sales behind them, and what was deduped out.",
+            "crop": [
+              48,
+              50,
+              416,
+              294
+            ]
+          },
+          {
+            "title": "Proposed keywords",
+            "text": "Each term with its economics, current CPC and suggested bid.",
+            "crop": [
+              492,
+              50,
+              416,
+              294
+            ]
+          },
+          {
+            "title": "ASIN queries & limits",
+            "text": "Competitor ASINs routed to product targeting, then the method.",
+            "crop": [
+              936,
+              50,
+              416,
+              294
+            ]
+          }
+        ],
+        "preview": {
+          "w": 1400,
+          "h": 392
+        },
+        "prerequisite": {
+          "icon": "Scale",
+          "title": "A break-even ROAS",
+          "text": "Gross margin into one. Without it the skill can say what converts, not what is worth promoting."
+        }
       }
     },
     {
@@ -254,6 +550,78 @@
         "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-wasted-spend@trackiq",
         "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-wasted-spend/releases/latest/download/trackiq-amazon-wasted-spend.zip",
         "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-wasted-spend/releases/latest/download/trackiq-amazon-wasted-spend-1.0.0.zip"
+      },
+      "page": {
+        "annotation": "Stop paying for what isn't paying back.",
+        "overview": "Sweeps Sponsored Products for spend that isn't earning its keep and hands back a bulk workbook with every ID already attached.",
+        "features": [
+          {
+            "icon": "CircleAlert",
+            "title": "Finds keywords that sold nothing",
+            "text": "Spend with zero orders over the window, ranked by what it cost."
+          },
+          {
+            "icon": "Scale",
+            "title": "Flags bids above break-even",
+            "text": "Keywords bidding more than they return, measured against your margin."
+          },
+          {
+            "icon": "Copy",
+            "title": "Catches self-competition",
+            "text": "The same keyword in several ad groups bidding against itself."
+          },
+          {
+            "icon": "Ban",
+            "title": "Proposes negatives",
+            "text": "Search terms worth negating, with the reason for each."
+          },
+          {
+            "icon": "FileSpreadsheet",
+            "title": "Writes an upload-ready workbook",
+            "text": "Campaign, ad group and keyword IDs attached, plus a one-page summary."
+          }
+        ],
+        "examples": [
+          {
+            "title": "The cover",
+            "text": "Recoverable spend, keywords flagged and bulk rows ready.",
+            "crop": [
+              48,
+              48,
+              416,
+              362
+            ]
+          },
+          {
+            "title": "Where the waste is",
+            "text": "Duplicated keywords, bids above break-even and negative candidates.",
+            "crop": [
+              492,
+              48,
+              416,
+              362
+            ]
+          },
+          {
+            "title": "Before you upload",
+            "text": "What can't go straight into a bulk file, and the method behind every cut.",
+            "crop": [
+              936,
+              48,
+              416,
+              362
+            ]
+          }
+        ],
+        "preview": {
+          "w": 1400,
+          "h": 458
+        },
+        "prerequisite": {
+          "icon": "Scale",
+          "title": "A break-even ROAS",
+          "text": "Every verdict depends on it. It comes from product margin and is not in the MCP, so the skill asks."
+        }
       }
     },
     {
@@ -298,6 +666,78 @@
         "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-category-priority-keywords@trackiq",
         "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-category-priority-keywords/releases/latest/download/trackiq-amazon-category-priority-keywords.zip",
         "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-category-priority-keywords/releases/latest/download/trackiq-amazon-category-priority-keywords-1.0.0.zip"
+      },
+      "page": {
+        "annotation": "Track the terms that carry revenue.",
+        "overview": "Groups your catalogue into categories and picks the 25 search terms per category worth tracking organic rank on.",
+        "features": [
+          {
+            "icon": "Layers",
+            "title": "Groups the catalogue",
+            "text": "ASINs organised into product categories, sized by revenue."
+          },
+          {
+            "icon": "ListChecks",
+            "title": "Picks 25 terms per category",
+            "text": "Chosen from Search Query Performance, not from guesswork."
+          },
+          {
+            "icon": "Wallet",
+            "title": "Prices every term",
+            "text": "Weekly volume, estimated monthly revenue, impression share, CTR and CVR."
+          },
+          {
+            "icon": "Target",
+            "title": "Labels the action",
+            "text": "Defend, Grow or Watch, explained in the report itself."
+          },
+          {
+            "icon": "Eye",
+            "title": "Finds the tracking gap",
+            "text": "Priority terms your rank tracker isn't watching, and the revenue behind them."
+          }
+        ],
+        "examples": [
+          {
+            "title": "The cover",
+            "text": "Categories, priority terms, revenue on them and how many are untracked.",
+            "crop": [
+              48,
+              48,
+              416,
+              312
+            ]
+          },
+          {
+            "title": "A category's terms",
+            "text": "The ranked priority terms with the tracking gap called out.",
+            "crop": [
+              492,
+              48,
+              416,
+              312
+            ]
+          },
+          {
+            "title": "Method and limits",
+            "text": "What the numbers are \u2014 and explicitly what they are not.",
+            "crop": [
+              936,
+              48,
+              416,
+              312
+            ]
+          }
+        ],
+        "preview": {
+          "w": 1400,
+          "h": 408
+        },
+        "prerequisite": {
+          "icon": "Database",
+          "title": "Search Query Performance data",
+          "text": "SQP ingestion running on the account. It is often sparse on newer brands, so the skill checks first."
+        }
       }
     },
     {
@@ -343,6 +783,78 @@
         "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-rank-movement@trackiq",
         "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-rank-movement/releases/latest/download/trackiq-amazon-rank-movement.zip",
         "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-rank-movement/releases/latest/download/trackiq-amazon-rank-movement-1.0.0.zip"
+      },
+      "page": {
+        "annotation": "Only the drops that cost real money.",
+        "overview": "Samples live search results each week and weights every gain and loss by what the keyword is worth, so expensive drops surface first.",
+        "features": [
+          {
+            "icon": "TrendingUp",
+            "title": "Samples live rank",
+            "text": "Organic position read from real search results every week."
+          },
+          {
+            "icon": "Wallet",
+            "title": "Weights by revenue",
+            "text": "Every move valued by what the keyword is worth, not by places."
+          },
+          {
+            "icon": "TrendingDown",
+            "title": "Flags page-boundary crossings",
+            "text": "Falling off page one costs more than falling a few spots."
+          },
+          {
+            "icon": "Search",
+            "title": "Explains disappearances",
+            "text": "Checks stock and listing status before calling it a rank loss."
+          },
+          {
+            "icon": "Eye",
+            "title": "Finds unwatched priorities",
+            "text": "Revenue-bearing terms nothing is tracking yet."
+          }
+        ],
+        "examples": [
+          {
+            "title": "The cover",
+            "text": "Estimated value moved, terms off page one and terms that disappeared.",
+            "crop": [
+              48,
+              48,
+              416,
+              327
+            ]
+          },
+          {
+            "title": "Biggest movers by value",
+            "text": "Both directions, ranked by the revenue that moved.",
+            "crop": [
+              492,
+              48,
+              416,
+              327
+            ]
+          },
+          {
+            "title": "This week's positions",
+            "text": "The baseline for next week, then the sampling method.",
+            "crop": [
+              936,
+              48,
+              416,
+              327
+            ]
+          }
+        ],
+        "preview": {
+          "w": 1400,
+          "h": 423
+        },
+        "prerequisite": {
+          "icon": "History",
+          "title": "Last week's run",
+          "text": "Movement compares against the previous run's saved file. The first run sets the baseline."
+        }
       }
     },
     {
@@ -388,6 +900,78 @@
         "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-rank-readiness@trackiq",
         "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-rank-readiness/releases/latest/download/trackiq-amazon-rank-readiness.zip",
         "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-rank-readiness/releases/latest/download/trackiq-amazon-rank-readiness-1.0.0.zip"
+      },
+      "page": {
+        "annotation": "Only fund the rank that will hold.",
+        "overview": "Tests whether a bought organic rank would survive the money stopping \u2014 your conversion against the market's, on the same query.",
+        "features": [
+          {
+            "icon": "Scale",
+            "title": "Compares you to the market",
+            "text": "Your conversion rate against the market's, query by query."
+          },
+          {
+            "icon": "Target",
+            "title": "Returns a verdict per keyword",
+            "text": "FUND, SEED, TEST or NO-GO \u2014 each with the reason."
+          },
+          {
+            "icon": "Ban",
+            "title": "Makes the case against",
+            "text": "High-volume terms you'd convert badly on, with their pool and ratio."
+          },
+          {
+            "icon": "Wallet",
+            "title": "Sizes what's really there",
+            "text": "Each query's annual value at your own price and the share you hold today."
+          },
+          {
+            "icon": "ShieldCheck",
+            "title": "Checks the hard gates",
+            "text": "Days of cover and buy box stated before any money moves."
+          }
+        ],
+        "examples": [
+          {
+            "title": "The cover",
+            "text": "Conversion against the market, and where the money sits.",
+            "crop": [
+              48,
+              48,
+              416,
+              491
+            ]
+          },
+          {
+            "title": "The funded keywords",
+            "text": "Terms that out-convert the market, with rank and ad cost.",
+            "crop": [
+              492,
+              48,
+              416,
+              491
+            ]
+          },
+          {
+            "title": "The terms to avoid",
+            "text": "High-volume pools you'd lose, and how to read the report.",
+            "crop": [
+              936,
+              48,
+              416,
+              491
+            ]
+          }
+        ],
+        "preview": {
+          "w": 1400,
+          "h": 599
+        },
+        "prerequisite": {
+          "icon": "Target",
+          "title": "One ASIN and its context",
+          "text": "Price, rating, reviews and days of cover. Optional, but they state the two hard gates."
+        }
       }
     },
     {
@@ -435,6 +1019,78 @@
         "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-search-visibility-audit@trackiq",
         "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-search-visibility-audit/releases/latest/download/trackiq-amazon-search-visibility-audit.zip",
         "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-search-visibility-audit/releases/latest/download/trackiq-amazon-search-visibility-audit-1.0.0.zip"
+      },
+      "page": {
+        "annotation": "Stop paying for rank you already own.",
+        "overview": "Shows where each ASIN actually appears in search, and what the gap between paid and organic is worth.",
+        "features": [
+          {
+            "icon": "Search",
+            "title": "Maps every query",
+            "text": "Owned, Doubled, Bought or Absent, per revenue-bearing query."
+          },
+          {
+            "icon": "Copy",
+            "title": "Finds double-paid terms",
+            "text": "Page-one organic rank you're still buying clicks on."
+          },
+          {
+            "icon": "Wallet",
+            "title": "Values the absent demand",
+            "text": "Revenue sitting behind queries you don't serve."
+          },
+          {
+            "icon": "Eye",
+            "title": "Separates untracked from unranked",
+            "text": "Never measured and not ranking are opposite findings."
+          },
+          {
+            "icon": "ListChecks",
+            "title": "Ends in four paste-ready lists",
+            "text": "Track, stop bidding, start bidding, fix the listing."
+          }
+        ],
+        "examples": [
+          {
+            "title": "The coverage summary",
+            "text": "Revenue-bearing queries, page-one coverage and what you double-pay for.",
+            "crop": [
+              48,
+              48,
+              416,
+              257
+            ]
+          },
+          {
+            "title": "Per-ASIN queries",
+            "text": "Each query in its state, then the four action lists.",
+            "crop": [
+              492,
+              48,
+              416,
+              257
+            ]
+          },
+          {
+            "title": "What the numbers are",
+            "text": "The estimates and limits, stated before anyone quotes them.",
+            "crop": [
+              936,
+              48,
+              416,
+              257
+            ]
+          }
+        ],
+        "preview": {
+          "w": 1400,
+          "h": 353
+        },
+        "prerequisite": {
+          "icon": "Database",
+          "title": "Rank tracking set up",
+          "text": "Tracked keywords in TrackIQ. Untracked queries are reported separately, never as not ranking."
+        }
       }
     },
     {
@@ -480,6 +1136,82 @@
         "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-share-of-shelf@trackiq",
         "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-share-of-shelf/releases/latest/download/trackiq-amazon-share-of-shelf.zip",
         "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-share-of-shelf/releases/latest/download/trackiq-amazon-share-of-shelf-1.0.0.zip"
+      },
+      "page": {
+        "annotation": "Who owns page one \u2014 and who has the rest.",
+        "overview": "Measures how much of Amazon page one your brand holds for the keywords that carry its revenue, against the competitors holding the rest.",
+        "features": [
+          {
+            "icon": "Store",
+            "title": "Counts your slots",
+            "text": "Organic and sponsored slots in the top results, keyword by keyword."
+          },
+          {
+            "icon": "Wallet",
+            "title": "Weights by revenue",
+            "text": "The expensive gaps sort to the top, not the high-volume ones."
+          },
+          {
+            "icon": "Trophy",
+            "title": "Tracks Amazon's Choice",
+            "text": "Badge state for every keyword in the basket."
+          },
+          {
+            "icon": "Users",
+            "title": "Names the competitors",
+            "text": "From Amazon's own brand facet, never guessed from titles."
+          },
+          {
+            "icon": "TrendingUp",
+            "title": "Shows week-over-week change",
+            "text": "Run weekly and the movement column does the talking."
+          }
+        ],
+        "examples": [
+          {
+            "title": "The shelf",
+            "text": "Every keyword by revenue: organic slots, share, best rank, sponsored slots and badges.",
+            "crop": [
+              48,
+              48,
+              416,
+              312
+            ],
+            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-share-of-shelf/main/.github/page/ex-1.png"
+          },
+          {
+            "title": "Categories and competitors",
+            "text": "Exposure by category against its revenue, then who holds the other slots.",
+            "crop": [
+              492,
+              48,
+              416,
+              312
+            ],
+            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-share-of-shelf/main/.github/page/ex-2.png"
+          },
+          {
+            "title": "Absent from page one",
+            "text": "The actionable list, with the most expensive gap spelled out.",
+            "crop": [
+              936,
+              48,
+              416,
+              312
+            ],
+            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-share-of-shelf/main/.github/page/ex-3.png"
+          }
+        ],
+        "preview": {
+          "w": 1400,
+          "h": 408
+        },
+        "prerequisite": {
+          "icon": "ListChecks",
+          "title": "A keyword basket",
+          "text": "Run Category Priority Keywords first so every term carries a revenue figure."
+        },
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-share-of-shelf/main/.github/page/hero.png"
       }
     },
     {
@@ -527,6 +1259,78 @@
         "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-catalog-hygiene@trackiq",
         "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-catalog-hygiene/releases/latest/download/trackiq-amazon-catalog-hygiene.zip",
         "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-catalog-hygiene/releases/latest/download/trackiq-amazon-catalog-hygiene-1.0.0.zip"
+      },
+      "page": {
+        "annotation": "Fix the quiet defects nobody owns.",
+        "overview": "Sweeps the whole catalogue for the defects that quietly cost sales, ranked by revenue at risk so the list is finite.",
+        "features": [
+          {
+            "icon": "Package",
+            "title": "Separates products from clutter",
+            "text": "Parents, shadow SKUs and dead listings filtered before anything is counted."
+          },
+          {
+            "icon": "FileText",
+            "title": "Checks every listing",
+            "text": "Image count, title length and bullet count against what actually displays."
+          },
+          {
+            "icon": "Ban",
+            "title": "Finds unbuyable listings",
+            "text": "Live but not purchasable, called out first regardless of revenue."
+          },
+          {
+            "icon": "Wallet",
+            "title": "Ranks by revenue at risk",
+            "text": "Defects weighted by the sales behind the affected product."
+          },
+          {
+            "icon": "ListChecks",
+            "title": "Gives the order to fix",
+            "text": "A short list someone could start on today."
+          }
+        ],
+        "examples": [
+          {
+            "title": "The cover",
+            "text": "Rows that aren't products, revenue at risk and listings not buyable.",
+            "crop": [
+              48,
+              48,
+              416,
+              326
+            ]
+          },
+          {
+            "title": "Defects by cause",
+            "text": "Grouped by cause, then the listings urgent regardless of revenue.",
+            "crop": [
+              492,
+              48,
+              416,
+              326
+            ]
+          },
+          {
+            "title": "The order to do it in",
+            "text": "What to fix first, and the checks no tool can perform.",
+            "crop": [
+              936,
+              48,
+              416,
+              326
+            ]
+          }
+        ],
+        "preview": {
+          "w": 1400,
+          "h": 422
+        },
+        "prerequisite": {
+          "icon": "Filter",
+          "title": "An agreed scope",
+          "text": "Page checks cost one scraper credit per ASIN, so the catalogue scope is agreed first."
+        }
       }
     },
     {
@@ -573,6 +1377,78 @@
         "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-competitor-teardown@trackiq",
         "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-competitor-teardown/releases/latest/download/trackiq-amazon-competitor-teardown.zip",
         "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-competitor-teardown/releases/latest/download/trackiq-amazon-competitor-teardown-1.0.0.zip"
+      },
+      "page": {
+        "annotation": "What the listings beating you do differently.",
+        "overview": "Puts one product page side by side with the three or four beating it on the shelf, then says what to change and in what order.",
+        "features": [
+          {
+            "icon": "Layers",
+            "title": "Compares side by side",
+            "text": "Title structure, images, bullets, price and review depth."
+          },
+          {
+            "icon": "Scale",
+            "title": "Compares price per unit",
+            "text": "Because a 30-count and a 50-count can't be compared on ticket price."
+          },
+          {
+            "icon": "Star",
+            "title": "Reads review depth",
+            "text": "Rating, review count and one-star share across the set."
+          },
+          {
+            "icon": "ListChecks",
+            "title": "Ranks the gaps",
+            "text": "Three to five differences worth fixing, tiered by effort."
+          },
+          {
+            "icon": "Ban",
+            "title": "Names what not to chase",
+            "text": "The gaps deliberately left open, and why."
+          }
+        ],
+        "examples": [
+          {
+            "title": "The cover",
+            "text": "Price per unit, review depth, one-star share and gaps worth fixing.",
+            "crop": [
+              48,
+              48,
+              416,
+              275
+            ]
+          },
+          {
+            "title": "The grid and the gaps",
+            "text": "Ours against theirs, then the gaps tiered by effort.",
+            "crop": [
+              492,
+              48,
+              416,
+              275
+            ]
+          },
+          {
+            "title": "Rank and buy box",
+            "text": "A snapshot of where each sits today, then the method.",
+            "crop": [
+              936,
+              48,
+              416,
+              275
+            ]
+          }
+        ],
+        "preview": {
+          "w": 1400,
+          "h": 371
+        },
+        "prerequisite": {
+          "icon": "Users",
+          "title": "A competitor set",
+          "text": "Three to five competitor ASINs. Ask, or take them from Share of Shelf."
+        }
       }
     },
     {
@@ -619,6 +1495,68 @@
         "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-listing-monitor@trackiq",
         "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-listing-monitor/releases/latest/download/trackiq-amazon-listing-monitor.zip",
         "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-listing-monitor/releases/latest/download/trackiq-amazon-listing-monitor-1.0.0.zip"
+      },
+      "page": {
+        "annotation": "Silence means nothing moved.",
+        "overview": "Watches your listings every day and alerts only when something real changed \u2014 with the revenue behind each ASIN.",
+        "features": [
+          {
+            "icon": "Bell",
+            "title": "Alerts only on real change",
+            "text": "Titles, bullets, images, A+, category, buy box, price and rating."
+          },
+          {
+            "icon": "Ban",
+            "title": "Catches unbuyable listings",
+            "text": "Any listing that has stopped being purchasable."
+          },
+          {
+            "icon": "Wallet",
+            "title": "Sorts by revenue",
+            "text": "The biggest change on the most valuable ASIN comes first."
+          },
+          {
+            "icon": "History",
+            "title": "Keeps a dated archive",
+            "text": "The evidence that opens a Seller Support case."
+          },
+          {
+            "icon": "Eye",
+            "title": "Says what it couldn't see",
+            "text": "Failed fetches listed as not checked \u2014 never as unchanged."
+          }
+        ],
+        "examples": [
+          {
+            "title": "The alert",
+            "text": "What changed, on which ASIN, with the revenue behind it.",
+            "crop": [
+              48,
+              48,
+              638,
+              449
+            ]
+          },
+          {
+            "title": "What couldn't be checked",
+            "text": "An explicit list of anything not verified this run.",
+            "crop": [
+              714,
+              48,
+              638,
+              449
+            ]
+          }
+        ],
+        "preview": {
+          "w": 1400,
+          "h": 545
+        },
+        "prerequisite": {
+          "icon": "HardDrive",
+          "title": "Snapshot storage",
+          "text": "It's a diff, so dated snapshots are kept between daily runs. The first run only sets a baseline."
+        }
       }
     },
     {
@@ -666,6 +1604,78 @@
         "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-listing-optimizer@trackiq",
         "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-listing-optimizer/releases/latest/download/trackiq-amazon-listing-optimizer.zip",
         "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-listing-optimizer/releases/latest/download/trackiq-amazon-listing-optimizer-1.0.0.zip"
+      },
+      "page": {
+        "annotation": "Copy written for how Amazon reads it.",
+        "overview": "Rewrites one listing against the terms it should rank for and the questions shoppers actually ask, with a reason for every change.",
+        "features": [
+          {
+            "icon": "FileText",
+            "title": "Rewrites the whole listing",
+            "text": "Title, bullets, description and backend terms."
+          },
+          {
+            "icon": "Search",
+            "title": "Uses terms that earn",
+            "text": "Every term traced to conversion or real volume."
+          },
+          {
+            "icon": "MessageSquare",
+            "title": "Answers shopper questions",
+            "text": "Each bullet answers what it is, who it's for and why it's different."
+          },
+          {
+            "icon": "Layers",
+            "title": "Shows current against proposed",
+            "text": "Side by side, with the reason for every change."
+          },
+          {
+            "icon": "ShieldCheck",
+            "title": "Flags compliance risk",
+            "text": "Claims and phrases worth a second look before publishing."
+          }
+        ],
+        "examples": [
+          {
+            "title": "The cover",
+            "text": "Title length now and proposed, bullets, terms worked in and flags.",
+            "crop": [
+              48,
+              48,
+              416,
+              361
+            ]
+          },
+          {
+            "title": "Title and bullets",
+            "text": "Current against proposed, and the terms each one carries.",
+            "crop": [
+              492,
+              48,
+              416,
+              361
+            ]
+          },
+          {
+            "title": "Backend terms",
+            "text": "Proposed terms within the byte limit, then the method.",
+            "crop": [
+              936,
+              48,
+              416,
+              361
+            ]
+          }
+        ],
+        "preview": {
+          "w": 1400,
+          "h": 457
+        },
+        "prerequisite": {
+          "icon": "Target",
+          "title": "One listing to rewrite",
+          "text": "The ASIN to work on. Current backend terms aren't in any tool, so they're checked by hand."
+        }
       }
     },
     {
@@ -713,6 +1723,78 @@
         "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-review-miner@trackiq",
         "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-review-miner/releases/latest/download/trackiq-amazon-review-miner.zip",
         "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-review-miner/releases/latest/download/trackiq-amazon-review-miner-1.0.0.zip"
+      },
+      "page": {
+        "annotation": "What buyers say \u2014 and what to say back.",
+        "overview": "Samples reviews across your catalogue and competitors, clusters praise and complaints into themes, and turns them into copy.",
+        "features": [
+          {
+            "icon": "MessageSquare",
+            "title": "Clusters reviews into themes",
+            "text": "What buyers praise and complain about, with counts."
+          },
+          {
+            "icon": "Users",
+            "title": "Compares against rivals",
+            "text": "The complaints competitors attract that you don't."
+          },
+          {
+            "icon": "Star",
+            "title": "Uses the full star distribution",
+            "text": "Every quantitative claim comes from complete rating data."
+          },
+          {
+            "icon": "FileText",
+            "title": "Turns themes into copy",
+            "text": "Bullet and A+ directions for each theme worth answering."
+          },
+          {
+            "icon": "Ban",
+            "title": "Suggests negative keywords",
+            "text": "Search terms that bring the wrong buyer."
+          }
+        ],
+        "examples": [
+          {
+            "title": "The cover",
+            "text": "Brand rating, one-star share, themes found and new themes.",
+            "crop": [
+              48,
+              48,
+              416,
+              321
+            ]
+          },
+          {
+            "title": "Themes",
+            "text": "Each theme with its count, then what rivals get complained about.",
+            "crop": [
+              492,
+              48,
+              416,
+              321
+            ]
+          },
+          {
+            "title": "What to do with it",
+            "text": "Each direction traced to a theme, then the method.",
+            "crop": [
+              936,
+              48,
+              416,
+              321
+            ]
+          }
+        ],
+        "preview": {
+          "w": 1400,
+          "h": 417
+        },
+        "prerequisite": {
+          "icon": "Users",
+          "title": "A competitor set",
+          "text": "Three to five competitor ASINs to sample against your own catalogue."
+        }
       }
     },
     {
@@ -755,6 +1837,78 @@
         "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-demand-forecast@trackiq",
         "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-demand-forecast/releases/latest/download/trackiq-amazon-demand-forecast.zip",
         "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-demand-forecast/releases/latest/download/trackiq-amazon-demand-forecast-1.0.0.zip"
+      },
+      "page": {
+        "annotation": "How much to order, and by when.",
+        "overview": "Turns trailing sales and last year's seasonal shape into a weekly forecast, then into order quantities and order-by dates.",
+        "features": [
+          {
+            "icon": "TrendingUp",
+            "title": "Forecasts week by week",
+            "text": "Trailing sales shaped by last year's seasonality."
+          },
+          {
+            "icon": "Truck",
+            "title": "Converts it to orders",
+            "text": "Quantities and order-by dates that account for lead time."
+          },
+          {
+            "icon": "ShieldCheck",
+            "title": "Sizes safety stock",
+            "text": "Set to the service level you choose."
+          },
+          {
+            "icon": "Gauge",
+            "title": "States the forecast error",
+            "text": "Backtested error per product, so nobody treats it as certain."
+          },
+          {
+            "icon": "Ban",
+            "title": "Says what it can't forecast",
+            "text": "Products without enough history are named, not guessed."
+          }
+        ],
+        "examples": [
+          {
+            "title": "The cover",
+            "text": "Order value, overdue orders, forecast error and what can't be forecast.",
+            "crop": [
+              48,
+              48,
+              416,
+              299
+            ]
+          },
+          {
+            "title": "The order plan",
+            "text": "Each product's forecast, safety stock, quantity and order-by date.",
+            "crop": [
+              492,
+              48,
+              416,
+              299
+            ]
+          },
+          {
+            "title": "Promotion weeks",
+            "text": "Weeks treated as promotions, then the method behind the forecast.",
+            "crop": [
+              936,
+              48,
+              416,
+              299
+            ]
+          }
+        ],
+        "preview": {
+          "w": 1400,
+          "h": 395
+        },
+        "prerequisite": {
+          "icon": "CalendarClock",
+          "title": "Lead time & service level",
+          "text": "Defaults of 45 days and 95%, labelled as assumptions if you don't supply them."
+        }
       }
     },
     {
@@ -798,6 +1952,78 @@
         "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-excess-inventory@trackiq",
         "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-excess-inventory/releases/latest/download/trackiq-amazon-excess-inventory.zip",
         "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-excess-inventory/releases/latest/download/trackiq-amazon-excess-inventory-1.0.0.zip"
+      },
+      "page": {
+        "annotation": "Free up the capital sitting still.",
+        "overview": "Finds inventory sitting too long and ranks it by capital tied up, with a recommendation per product.",
+        "features": [
+          {
+            "icon": "Package",
+            "title": "Finds cover beyond target",
+            "text": "Products holding far more stock than they sell through."
+          },
+          {
+            "icon": "Boxes",
+            "title": "Catches the wrong SKU",
+            "text": "Stock stranded on a SKU nobody buys, under a healthy parent."
+          },
+          {
+            "icon": "Wallet",
+            "title": "Ranks by capital tied up",
+            "text": "Valued at unit cost, or labelled as selling price."
+          },
+          {
+            "icon": "Target",
+            "title": "Recommends one action",
+            "text": "Discount, advertise, bundle, remove or write off."
+          },
+          {
+            "icon": "CircleAlert",
+            "title": "Separates the unfulfillable",
+            "text": "Units already lost, handled apart from slow stock."
+          }
+        ],
+        "examples": [
+          {
+            "title": "The cover",
+            "text": "Capital tied up, products over target and stranded SKUs.",
+            "crop": [
+              48,
+              48,
+              416,
+              327
+            ]
+          },
+          {
+            "title": "What to act on",
+            "text": "Each product checked before anything is written off.",
+            "crop": [
+              492,
+              48,
+              416,
+              327
+            ]
+          },
+          {
+            "title": "Unfulfillable stock",
+            "text": "Already-lost units, then the method and its limits.",
+            "crop": [
+              936,
+              48,
+              416,
+              327
+            ]
+          }
+        ],
+        "preview": {
+          "w": 1400,
+          "h": 423
+        },
+        "prerequisite": {
+          "icon": "Wallet",
+          "title": "Unit cost",
+          "text": "What you paid per unit, to value capital tied up. Without it, stock is valued at selling price."
+        }
       }
     },
     {
@@ -842,6 +2068,78 @@
         "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-inventory-ad-throttle@trackiq",
         "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-inventory-ad-throttle/releases/latest/download/trackiq-amazon-inventory-ad-throttle.zip",
         "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-inventory-ad-throttle/releases/latest/download/trackiq-amazon-inventory-ad-throttle-1.0.0.zip"
+      },
+      "page": {
+        "annotation": "Stop advertising what's about to run out.",
+        "overview": "Finds campaigns still paying to advertise products about to stock out, and writes the bulk file that throttles them.",
+        "features": [
+          {
+            "icon": "Package",
+            "title": "Finds low-cover products",
+            "text": "Days of cover per ASIN, using stock you can actually sell."
+          },
+          {
+            "icon": "Gauge",
+            "title": "Throttles on a ladder",
+            "text": "Bid down at 21\u201330 days, harder at 14\u201321, pause below 7."
+          },
+          {
+            "icon": "Layers",
+            "title": "Touches every ad",
+            "text": "One product is usually advertised in several campaigns."
+          },
+          {
+            "icon": "ArrowRightLeft",
+            "title": "Moves the freed budget",
+            "text": "To well-stocked products that return at or above account ACOS."
+          },
+          {
+            "icon": "History",
+            "title": "Writes the restore list",
+            "text": "Original bids and states, for when stock lands."
+          }
+        ],
+        "examples": [
+          {
+            "title": "The cover",
+            "text": "Spend at risk, ads to throttle and budget freed per day.",
+            "crop": [
+              48,
+              48,
+              416,
+              309
+            ]
+          },
+          {
+            "title": "What to throttle",
+            "text": "The ads behind each product, and where the freed budget goes.",
+            "crop": [
+              492,
+              48,
+              416,
+              309
+            ]
+          },
+          {
+            "title": "The restore list",
+            "text": "Original bids to put back, then the method.",
+            "crop": [
+              936,
+              48,
+              416,
+              309
+            ]
+          }
+        ],
+        "preview": {
+          "w": 1400,
+          "h": 405
+        },
+        "prerequisite": {
+          "icon": "CalendarClock",
+          "title": "A lead time",
+          "text": "Days from purchase order to sellable. Defaults to 45, labelled an assumption."
+        }
       }
     },
     {
@@ -884,6 +2182,78 @@
         "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-restock-priority@trackiq",
         "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-restock-priority/releases/latest/download/trackiq-amazon-restock-priority.zip",
         "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-restock-priority/releases/latest/download/trackiq-amazon-restock-priority-1.0.0.zip"
+      },
+      "page": {
+        "annotation": "What to ship next, and when to order.",
+        "overview": "Works out which products to ship next and in what order, ranked by the revenue exposed if they arrive late.",
+        "features": [
+          {
+            "icon": "Package",
+            "title": "Measures real cover",
+            "text": "Days of cover per ASIN from on-hand stock, never reserved."
+          },
+          {
+            "icon": "CalendarClock",
+            "title": "Dates every stockout",
+            "text": "When each product runs out at today's sales rate."
+          },
+          {
+            "icon": "CircleAlert",
+            "title": "Flags overdue orders",
+            "text": "Where the purchase order should already have been placed."
+          },
+          {
+            "icon": "Wallet",
+            "title": "Ranks by revenue at risk",
+            "text": "Not by days of cover \u2014 the expensive gap comes first."
+          },
+          {
+            "icon": "Truck",
+            "title": "Suggests a shipment",
+            "text": "A starting quantity per product to hold your target cover."
+          }
+        ],
+        "examples": [
+          {
+            "title": "The cover",
+            "text": "Revenue at risk, orders overdue, out of stock and units to ship.",
+            "crop": [
+              48,
+              48,
+              416,
+              322
+            ]
+          },
+          {
+            "title": "What needs a decision",
+            "text": "Each product's cover, run-out date and order-by date.",
+            "crop": [
+              492,
+              48,
+              416,
+              322
+            ]
+          },
+          {
+            "title": "Before placing an order",
+            "text": "The lead-time assumption and what the report doesn't forecast.",
+            "crop": [
+              936,
+              48,
+              416,
+              322
+            ]
+          }
+        ],
+        "preview": {
+          "w": 1400,
+          "h": 418
+        },
+        "prerequisite": {
+          "icon": "CalendarClock",
+          "title": "A lead time",
+          "text": "Without it the report can say when stock runs out, but not when to order."
+        }
       }
     },
     {
@@ -930,6 +2300,78 @@
         "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-stockout-impact@trackiq",
         "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-stockout-impact/releases/latest/download/trackiq-amazon-stockout-impact.zip",
         "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-stockout-impact/releases/latest/download/trackiq-amazon-stockout-impact-1.0.0.zip"
+      },
+      "page": {
+        "annotation": "What the stockout really cost.",
+        "overview": "Measures what a completed stockout cost and how recovery is going, then stages the plan to restart ads and rebuild rank.",
+        "features": [
+          {
+            "icon": "TrendingDown",
+            "title": "Estimates lost revenue",
+            "text": "Units and revenue against the pre-stockout run rate, as a range."
+          },
+          {
+            "icon": "Activity",
+            "title": "Tracks the recovery",
+            "text": "How far sessions and conversion fell, and whether they're back."
+          },
+          {
+            "icon": "Layers",
+            "title": "Checks for substitution",
+            "text": "Demand a sibling size or pack captured rather than lost."
+          },
+          {
+            "icon": "Wallet",
+            "title": "Finds wasted ad spend",
+            "text": "Clicks paid for while the product couldn't be bought."
+          },
+          {
+            "icon": "Rocket",
+            "title": "Stages the restart",
+            "text": "Ads and rank rebuilt in order, not switched back on at once."
+          }
+        ],
+        "examples": [
+          {
+            "title": "The cover",
+            "text": "Estimated lost revenue, ad spend wasted and sessions recovered.",
+            "crop": [
+              48,
+              48,
+              416,
+              326
+            ]
+          },
+          {
+            "title": "The cost, week by week",
+            "text": "Baseline, run-up, the hole and the recovery, with substitution.",
+            "crop": [
+              492,
+              48,
+              416,
+              326
+            ]
+          },
+          {
+            "title": "The recovery plan",
+            "text": "Staged steps and their status, then the method.",
+            "crop": [
+              936,
+              48,
+              416,
+              326
+            ]
+          }
+        ],
+        "preview": {
+          "w": 1400,
+          "h": 422
+        },
+        "prerequisite": {
+          "icon": "CalendarClock",
+          "title": "The stockout window",
+          "text": "When the ASIN went to zero and when it came back. The snapshot only shows today."
+        }
       }
     },
     {
@@ -973,6 +2415,78 @@
         "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-daily-snacks-email@trackiq",
         "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-daily-snacks-email/releases/latest/download/trackiq-amazon-daily-snacks-email.zip",
         "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-daily-snacks-email/releases/latest/download/trackiq-amazon-daily-snacks-email-1.1.1.zip"
+      },
+      "page": {
+        "annotation": "Three minutes. One story worth telling.",
+        "overview": "A short, editorial daily email for your Amazon account \u2014 written like a newsletter, not a report.",
+        "features": [
+          {
+            "icon": "Mail",
+            "title": "Opens on one real story",
+            "text": "The Big Bite: the one thing worth knowing today, with a chart."
+          },
+          {
+            "icon": "ChartColumn",
+            "title": "Covers the numbers",
+            "text": "Retail and ad spend for the day, then the week behind it."
+          },
+          {
+            "icon": "Trophy",
+            "title": "Keeps the scoreboard",
+            "text": "Best line, worst line and the biggest leak."
+          },
+          {
+            "icon": "Sparkles",
+            "title": "Adds a Snack Fact",
+            "text": "One number nobody computed \u2014 an efficiency gap, annualised."
+          },
+          {
+            "icon": "ListChecks",
+            "title": "Ends with the menu",
+            "text": "Numbered actions for the day: cut, fund or admin."
+          }
+        ],
+        "examples": [
+          {
+            "title": "The cold open",
+            "text": "Hey Sellers, then the day's and the week's numbers.",
+            "crop": [
+              48,
+              48,
+              416,
+              491
+            ]
+          },
+          {
+            "title": "Three charts",
+            "text": "Revenue mix, TACoS by line and DSP return, each with its takeaway.",
+            "crop": [
+              492,
+              48,
+              416,
+              491
+            ]
+          },
+          {
+            "title": "On the shelf",
+            "text": "Rank, BSR and badges for hero ASINs, then what else we're snacking on.",
+            "crop": [
+              936,
+              48,
+              416,
+              491
+            ]
+          }
+        ],
+        "preview": {
+          "w": 1400,
+          "h": 996
+        },
+        "prerequisite": {
+          "icon": "Package",
+          "title": "Your lines and hero ASINs",
+          "text": "Set once in account.md \u2014 the product lines and heroes the email ranks and tracks."
+        }
       }
     },
     {
@@ -1018,6 +2532,78 @@
         "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-launch-scorecard@trackiq",
         "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-launch-scorecard/releases/latest/download/trackiq-amazon-launch-scorecard.zip",
         "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-launch-scorecard/releases/latest/download/trackiq-amazon-launch-scorecard-1.0.0.zip"
+      },
+      "page": {
+        "annotation": "Is this launch building demand, or buying it?",
+        "overview": "Grades a new ASIN week by week through its first twelve weeks and ends in one verdict with one lever.",
+        "features": [
+          {
+            "icon": "Target",
+            "title": "Tracks against a target curve",
+            "text": "Units and revenue each week against where they should be."
+          },
+          {
+            "icon": "Activity",
+            "title": "Reads sessions against conversion",
+            "text": "The two-by-two that says what to do next."
+          },
+          {
+            "icon": "Star",
+            "title": "Watches review pace",
+            "text": "Reviews accumulating week over week."
+          },
+          {
+            "icon": "TrendingUp",
+            "title": "Follows organic rank",
+            "text": "Position on the target keywords as the launch matures."
+          },
+          {
+            "icon": "Gauge",
+            "title": "Glides TACoS to break-even",
+            "text": "Spend judged against a declining break-even path."
+          }
+        ],
+        "examples": [
+          {
+            "title": "The cover",
+            "text": "Verdict, pace against target, TACoS and the sessions trend.",
+            "crop": [
+              48,
+              48,
+              416,
+              305
+            ]
+          },
+          {
+            "title": "Week by week",
+            "text": "Units, target, sessions and conversion, then reviews and rank.",
+            "crop": [
+              492,
+              48,
+              416,
+              305
+            ]
+          },
+          {
+            "title": "The lever",
+            "text": "One action, the metric it moves and by when.",
+            "crop": [
+              936,
+              48,
+              416,
+              305
+            ]
+          }
+        ],
+        "preview": {
+          "w": 1400,
+          "h": 401
+        },
+        "prerequisite": {
+          "icon": "Target",
+          "title": "Launch date & a target",
+          "text": "Units or revenue by week twelve. Without a target there's no scorecard, only a chart."
+        }
       }
     },
     {
@@ -1063,6 +2649,78 @@
         "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-monthly-business-review@trackiq",
         "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-monthly-business-review/releases/latest/download/trackiq-amazon-monthly-business-review.zip",
         "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-monthly-business-review/releases/latest/download/trackiq-amazon-monthly-business-review-1.0.0.zip"
+      },
+      "page": {
+        "annotation": "The month-end deck, already reconciled.",
+        "overview": "Builds the month-end client deck for one brand, with every narrative claim traced to a number on a data slide.",
+        "features": [
+          {
+            "icon": "Presentation",
+            "title": "Builds the whole deck",
+            "text": "Cover, the month in a sentence, then the data slides."
+          },
+          {
+            "icon": "ChartColumn",
+            "title": "Compares three ways",
+            "text": "Against last month, the same month last year, and the plan."
+          },
+          {
+            "icon": "Split",
+            "title": "Splits organic and paid",
+            "text": "Where growth came from, not just how much."
+          },
+          {
+            "icon": "Layers",
+            "title": "Breaks down category and product mix",
+            "text": "What moved and why, line by line."
+          },
+          {
+            "icon": "ShieldCheck",
+            "title": "Reconciles every slide",
+            "text": "Revenue ties out, and last year's ad data is checked before it's used."
+          }
+        ],
+        "examples": [
+          {
+            "title": "The cover",
+            "text": "The brand, the month and the month in a sentence.",
+            "crop": [
+              48,
+              48,
+              416,
+              364
+            ]
+          },
+          {
+            "title": "Products and advertising",
+            "text": "What moved and why, then spend and return by portfolio.",
+            "crop": [
+              492,
+              48,
+              416,
+              364
+            ]
+          },
+          {
+            "title": "The month's KPIs",
+            "text": "Revenue, spend, ACOS and units against each comparison.",
+            "crop": [
+              936,
+              48,
+              416,
+              364
+            ]
+          }
+        ],
+        "preview": {
+          "w": 1400,
+          "h": 460
+        },
+        "prerequisite": {
+          "icon": "Settings",
+          "title": "Your account set up once",
+          "text": "Brand, marketplace and product lines in account.md \u2014 shared by every TrackIQ skill."
+        }
       }
     },
     {
@@ -1105,6 +2763,78 @@
         "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-sales-movers@trackiq",
         "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-sales-movers/releases/latest/download/trackiq-amazon-sales-movers.zip",
         "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-sales-movers/releases/latest/download/trackiq-amazon-sales-movers-1.0.0.zip"
+      },
+      "page": {
+        "annotation": "Sessions fell 31% \u2014 not \u201csales are down\u201d.",
+        "overview": "Ranks the catalogue by how much each product's revenue moved, and splits every move into its cause.",
+        "features": [
+          {
+            "icon": "TrendingUp",
+            "title": "Ranks every mover",
+            "text": "Products sorted by how much revenue moved, in dollars."
+          },
+          {
+            "icon": "Split",
+            "title": "Decomposes the cause",
+            "text": "Traffic, conversion, units per order or selling price."
+          },
+          {
+            "icon": "ShieldCheck",
+            "title": "Reconciles exactly",
+            "text": "The four factors multiply back to the revenue change."
+          },
+          {
+            "icon": "CalendarRange",
+            "title": "Compares like with like",
+            "text": "Two windows of the same length and the same weekdays."
+          },
+          {
+            "icon": "Layers",
+            "title": "Rolls SKUs up to ASIN",
+            "text": "So a variation shift isn't mistaken for a demand change."
+          }
+        ],
+        "examples": [
+          {
+            "title": "The cover",
+            "text": "Revenue moved, the biggest mover and movers up and down.",
+            "crop": [
+              48,
+              48,
+              416,
+              259
+            ]
+          },
+          {
+            "title": "The movement",
+            "text": "Each product's change split into its four causes.",
+            "crop": [
+              492,
+              48,
+              416,
+              259
+            ]
+          },
+          {
+            "title": "Reconciliation",
+            "text": "How product-level changes tie back to the account, then the method.",
+            "crop": [
+              936,
+              48,
+              416,
+              259
+            ]
+          }
+        ],
+        "preview": {
+          "w": 1400,
+          "h": 355
+        },
+        "prerequisite": {
+          "icon": "ArrowRightLeft",
+          "title": "Two periods to compare",
+          "text": "The same length and the same weekdays \u2014 the skill checks before it decomposes."
+        }
       }
     },
     {
@@ -1150,6 +2880,78 @@
         "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-weekly-executive-report@trackiq",
         "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-weekly-executive-report/releases/latest/download/trackiq-amazon-weekly-executive-report.zip",
         "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-weekly-executive-report/releases/latest/download/trackiq-amazon-weekly-executive-report-1.0.0.zip"
+      },
+      "page": {
+        "annotation": "The week, in one client-ready send.",
+        "overview": "A client-ready week-over-week recap: scorecard, pacing against your own baseline, where the money went and this week's decisions.",
+        "features": [
+          {
+            "icon": "ChartColumn",
+            "title": "Opens with the scorecard",
+            "text": "Retail, all-in ad spend and TACoS against last week."
+          },
+          {
+            "icon": "Gauge",
+            "title": "Paces against your own baseline",
+            "text": "This week against the trailing four-week average, not a target."
+          },
+          {
+            "icon": "Wallet",
+            "title": "Shows where the money went",
+            "text": "Retail earned per incremental ad dollar, line by line."
+          },
+          {
+            "icon": "Search",
+            "title": "Covers keyword economics",
+            "text": "Brand against non-brand, and proven terms running under potential."
+          },
+          {
+            "icon": "ListChecks",
+            "title": "Ends in decisions",
+            "text": "This week's moves: channel, move and the one-sentence reason."
+          }
+        ],
+        "examples": [
+          {
+            "title": "The executive summary",
+            "text": "KPI tiles, the takeaway headline and three numbered levers.",
+            "crop": [
+              48,
+              48,
+              416,
+              491
+            ]
+          },
+          {
+            "title": "Pacing and the money",
+            "text": "Against the four-week baseline, then where spend earned its keep.",
+            "crop": [
+              492,
+              48,
+              416,
+              491
+            ]
+          },
+          {
+            "title": "Keywords, inventory, actions",
+            "text": "Keyword economics, days of cover and the week's decisions.",
+            "crop": [
+              936,
+              48,
+              416,
+              491
+            ]
+          }
+        ],
+        "preview": {
+          "w": 1400,
+          "h": 793
+        },
+        "prerequisite": {
+          "icon": "Package",
+          "title": "Lines and inventory bands",
+          "text": "Set once in account.md \u2014 how ASINs group into lines and your days-of-cover thresholds."
+        }
       }
     }
   ],
