@@ -1,12 +1,12 @@
 {
-  "generated": "2026-09-18",
+  "generated": "2026-09-21",
   "marketplace": "TrackIQ-HQ/amazon-seller-skills",
   "homepage": "https://trackiq.com/skills",
   "categories": [
     {
       "id": "advertising",
-      "label": "Amazon Advertising",
-      "blurb": "Where the ad money goes, and what it buys.",
+      "label": "Amazon Sponsored Ads",
+      "blurb": "Where the Sponsored Ads budget goes, and what it buys.",
       "slug": "amazon-advertising",
       "url": "https://trackiq.com/skills/amazon-advertising",
       "icon": "ChartColumn",
@@ -23,6 +23,29 @@
         [
           "Sparkles",
           "Built for Amazon\nsellers & agencies"
+        ]
+      ]
+    },
+    {
+      "id": "amc",
+      "label": "Amazon AMC & DSP",
+      "blurb": "Who the ads reach, and which customers are new.",
+      "slug": "amazon-amc-dsp",
+      "url": "https://trackiq.com/skills/amazon-amc-dsp",
+      "icon": "Cloud",
+      "annotation": "Know who you reach.\nAnd who's new.",
+      "props": [
+        [
+          "Users",
+          "See which campaigns\nrecruit new buyers"
+        ],
+        [
+          "Route",
+          "Follow the path\nto purchase"
+        ],
+        [
+          "Clock",
+          "Know how long\nshoppers take"
         ]
       ]
     },
@@ -121,12 +144,12 @@
   ],
   "skills": [
     {
-      "name": "trackiq-amazon-amc-media-mix",
-      "title": "TrackIQ: Amazon AMC Media Mix",
+      "name": "trackiq-amazon-branded-search",
+      "title": "TrackIQ: Amazon Branded vs. Non-Branded Search",
       "category": "advertising",
       "version": "1.0.0",
-      "updated": "2026-09-18",
-      "summary": "A twelve-slide Amazon Marketing Cloud deck arguing one case \u2014 where the budget goes versus where new customers come from. Attribution paths, what DSP is worth alone versus in a path, cost per new customer by channel, time to purchase, and one reallocation with the arithmetic shown.",
+      "updated": "2026-09-21",
+      "summary": "Splits every Amazon Sponsored Products and Sponsored Brands search term into branded, competitor, product-targeting and generic buckets, then shows where the ad money really goes \u2014 how much is spent on shoppers who already typed the brand, what generic search returns once brand is taken out, whether competitor conquesting pays \u2014 and checks organic share on the brand's own name before calling brand spend defence or waste.",
       "changelog": "First public release.",
       "requires": {
         "mcp": [
@@ -134,14 +157,13 @@
         ],
         "tools": [
           "list_marketplaces",
-          "get_amc_attribution_paths",
-          "get_amc_ntb_purchases",
-          "get_amc_time_to_conversion",
-          "get_account_overview",
-          "get_dsp_performance"
+          "get_search_terms",
+          "get_targets",
+          "get_search_query_performance"
         ],
         "filesystem": false,
-        "network": false
+        "network": false,
+        "third_party_apis": []
       },
       "delivery": {
         "methods": [
@@ -152,130 +174,100 @@
           "email"
         ],
         "default": "in-chat",
-        "note": "in-chat always works and is the fallback. file needs a filesystem, n8n needs network, slack and email need their tool connected. Outward sends confirm first."
+        "note": "in-chat always works and is the fallback. Outward sends confirm first."
       },
-      "fallback": "Works from exported AMC attribution-path, NTB-by-campaign and time-to-conversion tables plus monthly spend by channel. Slides 3-10 build from pasted figures; slide 11 records which pulls were manual.",
-      "homepage": "https://trackiq.com/skills/trackiq-amazon-amc-media-mix",
+      "fallback": "",
+      "homepage": "https://trackiq.com/skills/trackiq-amazon-branded-search",
       "license": "MIT",
-      "plugin": "trackiq-amazon-amc-media-mix",
-      "repository": "https://github.com/TrackIQ-HQ/trackiq-amazon-amc-media-mix",
+      "plugin": "trackiq-amazon-branded-search",
+      "repository": "https://github.com/TrackIQ-HQ/trackiq-amazon-branded-search",
       "install": {
-        "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-amc-media-mix@trackiq",
-        "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-amc-media-mix/releases/latest/download/trackiq-amazon-amc-media-mix.zip",
-        "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-amc-media-mix/releases/latest/download/trackiq-amazon-amc-media-mix-1.0.0.zip"
+        "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-branded-search@trackiq",
+        "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-branded-search/releases/latest/download/trackiq-amazon-branded-search.zip",
+        "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-branded-search/releases/latest/download/trackiq-amazon-branded-search-1.0.0.zip"
       },
       "page": {
-        "annotation": "Turn AMC data into clearer decisions.",
-        "overview": "Turns three months of Amazon Marketing Cloud paths into one argument: where the budget goes versus where new customers actually come from.",
+        "annotation": "What your ads return without the brand name.",
+        "overview": "Splits every search term into branded, competitor, product targeting and generic, so the ROAS that measures growth isn't flattered by brand search.",
         "features": [
           {
-            "icon": "ChartPie",
-            "title": "Maps the whole media mix",
-            "text": "Sponsored Products, Brands, Display and DSP read as one path, not four reports."
+            "icon": "Split",
+            "title": "Splits search four ways",
+            "text": "Branded, competitor, product targeting and generic."
           },
           {
-            "icon": "Route",
-            "title": "Shows the touch ladder",
-            "text": "What each extra ad touch does to conversion, ROAS and new-to-brand share."
+            "icon": "Gauge",
+            "title": "Headlines generic ROAS",
+            "text": "The number that says whether ads find new demand."
+          },
+          {
+            "icon": "ShieldCheck",
+            "title": "Checks brand defence",
+            "text": "Organic share on the brand's own name before calling spend waste."
           },
           {
             "icon": "Users",
-            "title": "Prices every new customer",
-            "text": "One cost-per-new-customer definition applied across every channel."
+            "title": "Prices conquesting",
+            "text": "What competitor search returns against generic."
           },
           {
-            "icon": "Clock",
-            "title": "Measures time to purchase",
-            "text": "Sets your attribution window and how early to fund a Prime Day."
-          },
-          {
-            "icon": "ArrowRightLeft",
-            "title": "Ends in one reallocation",
-            "text": "A single budget move with the arithmetic and confidence shown."
+            "icon": "Eye",
+            "title": "Shows its working",
+            "text": "The terms used and the largest queries in every bucket."
           }
         ],
         "examples": [
           {
-            "title": "The DSP question",
-            "text": "DSP alone versus inside a converting path \u2014 and what the data does not say.",
-            "crop": [
-              48,
-              44,
-              416,
-              236
-            ],
-            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-amc-media-mix/main/.github/page/ex-1.png"
+            "title": "The split",
+            "text": "Each bucket by channel, with generic ROAS against the blended average.",
+            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-branded-search/main/.github/page/ex-1.png"
           },
           {
-            "title": "Cost of a new customer",
-            "text": "One definition across every channel, cheapest recruiter first.",
-            "crop": [
-              492,
-              44,
-              416,
-              236
-            ],
-            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-amc-media-mix/main/.github/page/ex-2.png"
+            "title": "Is the brand spend defence?",
+            "text": "Organic purchase share on branded queries, and the test to run.",
+            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-branded-search/main/.github/page/ex-2.png"
           },
           {
-            "title": "The recommendation",
-            "text": "Each proposed move with its arithmetic, assumption and confidence.",
-            "crop": [
-              936,
-              44,
-              416,
-              236
-            ],
-            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-amc-media-mix/main/.github/page/ex-3.png"
+            "title": "Largest queries in each bucket",
+            "text": "So a misfiled term can be corrected.",
+            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-branded-search/main/.github/page/ex-3.png"
           }
         ],
-        "preview": {
-          "w": 1400,
-          "h": 324
-        },
         "prerequisite": {
-          "icon": "Database",
-          "title": "AMC enabled, DSP running",
-          "text": "Amazon Marketing Cloud on the account with DSP spend. Without DSP there is no mix to analyse."
+          "icon": "Search",
+          "title": "Brand and competitor terms",
+          "text": "The brand name, its misspellings and product lines, set once in account.md."
         },
-        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-amc-media-mix/main/.github/page/hero.png",
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-branded-search/main/.github/page/hero.png",
         "mini": {
           "k": "kpis",
-          "t": "Media Mix Overview",
+          "t": "Branded vs. Generic",
           "kpis": [
             [
-              "$143.3K",
-              "Total Spend"
+              "2.6x",
+              "Generic ROAS"
             ],
             [
-              "3,580",
-              "New Customers"
+              "3.3x",
+              "Blended ROAS"
             ],
             [
-              "$40.03",
-              "Cost per New"
+              "15%",
+              "Branded Spend"
             ],
             [
-              "4.5x",
-              "ROAS"
+              "+0.7x",
+              "Brand Lift"
             ]
           ],
           "bars": [
             [
-              94,
-              56
+              69,
+              15
             ],
             [
-              20,
-              38
-            ],
-            [
-              20,
-              10
-            ],
-            [
-              10,
-              13
+              8,
+              8
             ]
           ]
         }
@@ -388,14 +380,14 @@
             "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-budget-pacing/main/.github/page/ex-3.png"
           }
         ],
-        "preview": {
-          "w": 1400,
-          "h": 399
-        },
         "prerequisite": {
           "icon": "Target",
           "title": "The month's plan",
           "text": "Your spend target, plus a sales or ACOS target if you have one. It is not in the API, so the skill asks."
+        },
+        "preview": {
+          "w": 1400,
+          "h": 399
         },
         "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-budget-pacing/main/.github/page/hero.png",
         "mini": {
@@ -428,167 +420,6 @@
               52,
               "s"
             ]
-          ]
-        }
-      }
-    },
-    {
-      "name": "trackiq-amazon-dsp-performance",
-      "title": "TrackIQ: Amazon DSP Audience and Creative Performance",
-      "category": "advertising",
-      "version": "1.0.0",
-      "updated": "2026-09-18",
-      "summary": "Breaks Amazon DSP down by audience, creative, inventory source, technology and geography to show which segments actually recruit customers and which burn impressions. Ranks on new-to-brand purchases, detail page views and cost per action rather than ROAS, because DSP revenue is not returned at these dimensions.",
-      "changelog": "First public release.",
-      "requires": {
-        "mcp": [
-          "trackiq"
-        ],
-        "tools": [
-          "get_dsp_performance",
-          "list_marketplaces"
-        ],
-        "filesystem": false,
-        "network": false,
-        "third_party_apis": []
-      },
-      "delivery": {
-        "methods": [
-          "in-chat",
-          "file",
-          "slack",
-          "n8n",
-          "email"
-        ],
-        "default": "in-chat",
-        "note": "in-chat always works and is the fallback. Outward sends confirm first."
-      },
-      "homepage": "https://trackiq.com/skills/trackiq-amazon-dsp-performance",
-      "license": "MIT",
-      "plugin": "trackiq-amazon-dsp-performance",
-      "repository": "https://github.com/TrackIQ-HQ/trackiq-amazon-dsp-performance",
-      "install": {
-        "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-dsp-performance@trackiq",
-        "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-dsp-performance/releases/latest/download/trackiq-amazon-dsp-performance.zip",
-        "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-dsp-performance/releases/latest/download/trackiq-amazon-dsp-performance-1.0.0.zip"
-      },
-      "page": {
-        "annotation": "See which audiences actually recruit.",
-        "overview": "Breaks Amazon DSP down by audience, creative, inventory, technology and geography, ranked on new-to-brand rather than ROAS.",
-        "features": [
-          {
-            "icon": "Users",
-            "title": "Ranks audiences by recruitment",
-            "text": "Cost per new-to-brand purchase against the median of each dimension."
-          },
-          {
-            "icon": "Layers",
-            "title": "Covers every dimension",
-            "text": "Audience, creative, inventory source, technology and geography."
-          },
-          {
-            "icon": "Filter",
-            "title": "Shows where the funnel breaks",
-            "text": "Page views without add-to-carts read as a listing problem, not a bad segment."
-          },
-          {
-            "icon": "Copy",
-            "title": "Catches overlapping segments",
-            "text": "Segments that share the same impressions counted as one finding."
-          },
-          {
-            "icon": "Scissors",
-            "title": "Ends in scale, fix or cut",
-            "text": "Three short lists. Everything else stays quiet."
-          }
-        ],
-        "examples": [
-          {
-            "title": "By audience",
-            "text": "Each segment ranked on cost per new-to-brand purchase against the median.",
-            "crop": [
-              48,
-              48,
-              416,
-              301
-            ],
-            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-dsp-performance/main/.github/page/ex-1.png"
-          },
-          {
-            "title": "Overlaps and funnel breaks",
-            "text": "Segments sharing one pool of impressions, and where page views stop turning into carts.",
-            "crop": [
-              492,
-              48,
-              416,
-              301
-            ],
-            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-dsp-performance/main/.github/page/ex-2.png"
-          },
-          {
-            "title": "Scale, fix, cut",
-            "text": "Three short lists, each with the spend at stake and the reason.",
-            "crop": [
-              936,
-              48,
-              416,
-              301
-            ],
-            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-dsp-performance/main/.github/page/ex-3.png"
-          }
-        ],
-        "preview": {
-          "w": 1400,
-          "h": 397
-        },
-        "prerequisite": {
-          "icon": "Database",
-          "title": "A DSP account with spend",
-          "text": "Not every account runs DSP. The skill checks for spend in the window before promising a report."
-        },
-        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-dsp-performance/main/.github/page/hero.png",
-        "mini": {
-          "k": "kpis",
-          "t": "DSP Performance",
-          "tabs": [
-            "Audience",
-            "Creative",
-            "Geography",
-            "Inventory"
-          ],
-          "kpis": [
-            [
-              "891",
-              "New-to-brand",
-              "\u25b2 18%"
-            ],
-            [
-              "$46.22",
-              "Cost per NTB",
-              "\u25bc 9%",
-              "g"
-            ],
-            [
-              "$41.2K",
-              "Spend",
-              "\u25b2 4%",
-              "n"
-            ],
-            [
-              "5",
-              "Segments"
-            ]
-          ],
-          "bars": [
-            100,
-            82,
-            55,
-            22,
-            20,
-            64,
-            48,
-            36,
-            28
           ]
         }
       }
@@ -700,14 +531,14 @@
             "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-search-term-harvester/main/.github/page/ex-3.png"
           }
         ],
-        "preview": {
-          "w": 1400,
-          "h": 392
-        },
         "prerequisite": {
           "icon": "Scale",
           "title": "A break-even ROAS",
           "text": "Gross margin into one. Without it the skill can say what converts, not what is worth promoting."
+        },
+        "preview": {
+          "w": 1400,
+          "h": 392
         },
         "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-search-term-harvester/main/.github/page/hero.png",
         "mini": {
@@ -759,6 +590,160 @@
               [
                 "Add Exact",
                 "g"
+              ]
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "trackiq-amazon-campaign-structure-audit",
+      "title": "TrackIQ: Amazon Sponsored Ads Structure Audit",
+      "category": "advertising",
+      "version": "1.0.0",
+      "updated": "2026-09-21",
+      "summary": "Audits how an Amazon Sponsored Ads account is built rather than how it performed last week \u2014 ad groups crowded with unrelated products, the same product advertised in a dozen ad groups competing with itself, keywords stacked in every match type inside one ad group, spend sitting outside any portfolio, and selling products with no ad at all \u2014 ranked by the spend each problem touches, with a fix order the team can work through.",
+      "changelog": "First public release.",
+      "requires": {
+        "mcp": [
+          "trackiq"
+        ],
+        "tools": [
+          "list_marketplaces",
+          "get_campaigns",
+          "get_ad_groups",
+          "get_targets",
+          "get_product_ads",
+          "get_portfolios",
+          "get_product_performance"
+        ],
+        "filesystem": false,
+        "network": false,
+        "third_party_apis": []
+      },
+      "delivery": {
+        "methods": [
+          "in-chat",
+          "file",
+          "slack",
+          "n8n",
+          "email"
+        ],
+        "default": "in-chat",
+        "note": "in-chat always works and is the fallback. Outward sends confirm first."
+      },
+      "fallback": "",
+      "homepage": "https://trackiq.com/skills/trackiq-amazon-campaign-structure-audit",
+      "license": "MIT",
+      "plugin": "trackiq-amazon-campaign-structure-audit",
+      "repository": "https://github.com/TrackIQ-HQ/trackiq-amazon-campaign-structure-audit",
+      "install": {
+        "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-campaign-structure-audit@trackiq",
+        "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-campaign-structure-audit/releases/latest/download/trackiq-amazon-campaign-structure-audit.zip",
+        "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-campaign-structure-audit/releases/latest/download/trackiq-amazon-campaign-structure-audit-1.0.0.zip"
+      },
+      "page": {
+        "annotation": "See why the account is hard to steer.",
+        "overview": "Audits how the Sponsored Ads account is built \u2014 not how it performed \u2014 and ranks every structural problem by the spend it touches.",
+        "features": [
+          {
+            "icon": "Layers",
+            "title": "Finds crowded ad groups",
+            "text": "Products at very different prices forced to share one bid."
+          },
+          {
+            "icon": "Copy",
+            "title": "Catches self-competition",
+            "text": "One product advertised in a dozen ad groups at once."
+          },
+          {
+            "icon": "Filter",
+            "title": "Spots stacked match types",
+            "text": "Exact and broad in one ad group, sharing a budget."
+          },
+          {
+            "icon": "Wallet",
+            "title": "Measures portfolio coverage",
+            "text": "Spend outside any portfolio can't be capped or paced."
+          },
+          {
+            "icon": "ListChecks",
+            "title": "Ends in a fix order",
+            "text": "The top five changes, each with the control it buys."
+          }
+        ],
+        "examples": [
+          {
+            "title": "Where the structure costs control",
+            "text": "Every finding ranked by the spend it touches, with the fix.",
+            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-campaign-structure-audit/main/.github/page/ex-1.png"
+          },
+          {
+            "title": "Crowding and self-competition",
+            "text": "Ad groups sharing one bid, and products in too many places.",
+            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-campaign-structure-audit/main/.github/page/ex-2.png"
+          },
+          {
+            "title": "Unadvertised sellers and the fix order",
+            "text": "Products selling with no ad, and the order to fix everything.",
+            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-campaign-structure-audit/main/.github/page/ex-3.png"
+          }
+        ],
+        "prerequisite": {
+          "icon": "Settings",
+          "title": "Structure thresholds",
+          "text": "Defaults work for most brands; adjust them once in account.md."
+        },
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-campaign-structure-audit/main/.github/page/hero.png",
+        "mini": {
+          "k": "table",
+          "t": "Structure Findings",
+          "cols": [
+            "Finding",
+            "Where",
+            "Spend",
+            "Items",
+            "Fix"
+          ],
+          "rows": [
+            [
+              "Outside portfolios",
+              "21 campaigns",
+              "$14,200",
+              "21",
+              [
+                "Assign",
+                "r"
+              ]
+            ],
+            [
+              "Crowded ad group",
+              "Patio Lighting \u2014 Broad",
+              "$8,900",
+              "14",
+              [
+                "Split",
+                "r"
+              ]
+            ],
+            [
+              "Product in 11 ad groups",
+              "48ft String Lights",
+              "$6,400",
+              "11",
+              [
+                "Pause 8",
+                "w"
+              ]
+            ],
+            [
+              "Match types stacked",
+              "Fire Pits \u2014 Generic",
+              "$2,900",
+              "9",
+              [
+                "Isolate",
+                "w"
               ]
             ]
           ]
@@ -884,14 +869,14 @@
             "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-wasted-spend/main/.github/page/ex-4.png"
           }
         ],
-        "preview": {
-          "w": 1400,
-          "h": 458
-        },
         "prerequisite": {
           "icon": "Scale",
           "title": "A break-even ROAS",
           "text": "Every verdict depends on it. It comes from product margin and is not in the MCP, so the skill asks."
+        },
+        "preview": {
+          "w": 1400,
+          "h": 458
         },
         "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-wasted-spend/main/.github/page/hero.png",
         "mini": {
@@ -945,6 +930,762 @@
                 "r"
               ]
             ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "trackiq-amazon-amc-conversion-lag",
+      "title": "TrackIQ: Amazon AMC Conversion Lag & Attribution Window",
+      "category": "amc",
+      "version": "1.0.0",
+      "updated": "2026-09-21",
+      "summary": "Reads Amazon Marketing Cloud's time-to-conversion data to show how long shoppers take between their first ad touch and purchase \u2014 the share that buys within the hour, the day and the week, and how that shifts month to month \u2014 then turns it into two decisions: which attribution window to report on, and how many days ahead of a sales event to start upper-funnel spend.",
+      "changelog": "First public release.",
+      "requires": {
+        "mcp": [
+          "trackiq"
+        ],
+        "tools": [
+          "list_marketplaces",
+          "get_amc_time_to_conversion",
+          "get_campaigns"
+        ],
+        "filesystem": false,
+        "network": false,
+        "third_party_apis": []
+      },
+      "delivery": {
+        "methods": [
+          "in-chat",
+          "file",
+          "slack",
+          "n8n",
+          "email"
+        ],
+        "default": "in-chat",
+        "note": "in-chat always works and is the fallback. Outward sends confirm first."
+      },
+      "fallback": "",
+      "homepage": "https://trackiq.com/skills/trackiq-amazon-amc-conversion-lag",
+      "license": "MIT",
+      "plugin": "trackiq-amazon-amc-conversion-lag",
+      "repository": "https://github.com/TrackIQ-HQ/trackiq-amazon-amc-conversion-lag",
+      "install": {
+        "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-amc-conversion-lag@trackiq",
+        "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-amc-conversion-lag/releases/latest/download/trackiq-amazon-amc-conversion-lag.zip",
+        "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-amc-conversion-lag/releases/latest/download/trackiq-amazon-amc-conversion-lag-1.0.0.zip"
+      },
+      "page": {
+        "annotation": "How long shoppers take to buy.",
+        "overview": "Reads AMC's time-to-conversion buckets to set the attribution window you report on and the lead time for your next event.",
+        "features": [
+          {
+            "icon": "Clock",
+            "title": "Measures the lag",
+            "text": "The share buying within the hour, the day and the week."
+          },
+          {
+            "icon": "CalendarRange",
+            "title": "Tracks the trend",
+            "text": "Whether the consideration cycle is lengthening month to month."
+          },
+          {
+            "icon": "Eye",
+            "title": "Shows what reports miss",
+            "text": "The purchases a 7-day Sponsored Products window can't see."
+          },
+          {
+            "icon": "CalendarClock",
+            "title": "Sets event lead time",
+            "text": "How far ahead to start upper-funnel spend."
+          },
+          {
+            "icon": "ShieldCheck",
+            "title": "States its limits",
+            "text": "Purchases only, uneven buckets, and an open-ended last one."
+          }
+        ],
+        "examples": [
+          {
+            "title": "The lag",
+            "text": "Nine time buckets over three months, with the cumulative share.",
+            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-amc-conversion-lag/main/.github/page/ex-1.png"
+          },
+          {
+            "title": "Which window to report on",
+            "text": "The share of purchases each reporting window can see.",
+            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-amc-conversion-lag/main/.github/page/ex-2.png"
+          },
+          {
+            "title": "Planning an event",
+            "text": "When to start each kind of spend, and purchases by channel.",
+            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-amc-conversion-lag/main/.github/page/ex-3.png"
+          }
+        ],
+        "prerequisite": {
+          "icon": "Database",
+          "title": "AMC on the account",
+          "text": "Amazon Marketing Cloud enabled. Without it the skill stops and says so."
+        },
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-amc-conversion-lag/main/.github/page/hero.png",
+        "mini": {
+          "k": "kpis",
+          "t": "Time to Conversion \u00b7 August",
+          "kpis": [
+            [
+              "63%",
+              "Within an Hour"
+            ],
+            [
+              "76%",
+              "Within a Day"
+            ],
+            [
+              "89%",
+              "Within a Week"
+            ],
+            [
+              "11%",
+              "After a Week",
+              "\u25b2 1.3 pt",
+              "r"
+            ]
+          ],
+          "bars": [
+            23,
+            29,
+            8,
+            3,
+            2,
+            7,
+            5,
+            14,
+            11
+          ]
+        }
+      }
+    },
+    {
+      "name": "trackiq-amazon-amc-media-mix",
+      "title": "TrackIQ: Amazon AMC Media Mix",
+      "category": "amc",
+      "version": "1.0.1",
+      "updated": "2026-09-21",
+      "summary": "A twelve-slide Amazon Marketing Cloud deck arguing one case \u2014 where the budget goes versus where new customers come from. Attribution paths, what DSP is worth alone versus in a path, cost per new customer by channel, time to purchase, and one reallocation with the arithmetic shown.",
+      "changelog": "Moves to the new Amazon AMC & DSP category. No change to what the skill does.",
+      "requires": {
+        "mcp": [
+          "trackiq"
+        ],
+        "tools": [
+          "list_marketplaces",
+          "get_amc_attribution_paths",
+          "get_amc_ntb_purchases",
+          "get_amc_time_to_conversion",
+          "get_account_overview",
+          "get_dsp_performance"
+        ],
+        "filesystem": false,
+        "network": false
+      },
+      "delivery": {
+        "methods": [
+          "in-chat",
+          "file",
+          "slack",
+          "n8n",
+          "email"
+        ],
+        "default": "in-chat",
+        "note": "in-chat always works and is the fallback. file needs a filesystem, n8n needs network, slack and email need their tool connected. Outward sends confirm first."
+      },
+      "fallback": "Works from exported AMC attribution-path, NTB-by-campaign and time-to-conversion tables plus monthly spend by channel. Slides 3-10 build from pasted figures; slide 11 records which pulls were manual.",
+      "homepage": "https://trackiq.com/skills/trackiq-amazon-amc-media-mix",
+      "license": "MIT",
+      "plugin": "trackiq-amazon-amc-media-mix",
+      "repository": "https://github.com/TrackIQ-HQ/trackiq-amazon-amc-media-mix",
+      "install": {
+        "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-amc-media-mix@trackiq",
+        "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-amc-media-mix/releases/latest/download/trackiq-amazon-amc-media-mix.zip",
+        "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-amc-media-mix/releases/latest/download/trackiq-amazon-amc-media-mix-1.0.1.zip"
+      },
+      "page": {
+        "annotation": "Turn AMC data into clearer decisions.",
+        "overview": "Turns three months of Amazon Marketing Cloud paths into one argument: where the budget goes versus where new customers actually come from.",
+        "features": [
+          {
+            "icon": "ChartPie",
+            "title": "Maps the whole media mix",
+            "text": "Sponsored Products, Brands, Display and DSP read as one path, not four reports."
+          },
+          {
+            "icon": "Route",
+            "title": "Shows the touch ladder",
+            "text": "What each extra ad touch does to conversion, ROAS and new-to-brand share."
+          },
+          {
+            "icon": "Users",
+            "title": "Prices every new customer",
+            "text": "One cost-per-new-customer definition applied across every channel."
+          },
+          {
+            "icon": "Clock",
+            "title": "Measures time to purchase",
+            "text": "Sets your attribution window and how early to fund a Prime Day."
+          },
+          {
+            "icon": "ArrowRightLeft",
+            "title": "Ends in one reallocation",
+            "text": "A single budget move with the arithmetic and confidence shown."
+          }
+        ],
+        "examples": [
+          {
+            "title": "The DSP question",
+            "text": "DSP alone versus inside a converting path \u2014 and what the data does not say.",
+            "crop": [
+              48,
+              44,
+              416,
+              236
+            ],
+            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-amc-media-mix/main/.github/page/ex-1.png"
+          },
+          {
+            "title": "Cost of a new customer",
+            "text": "One definition across every channel, cheapest recruiter first.",
+            "crop": [
+              492,
+              44,
+              416,
+              236
+            ],
+            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-amc-media-mix/main/.github/page/ex-2.png"
+          },
+          {
+            "title": "The recommendation",
+            "text": "Each proposed move with its arithmetic, assumption and confidence.",
+            "crop": [
+              936,
+              44,
+              416,
+              236
+            ],
+            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-amc-media-mix/main/.github/page/ex-3.png"
+          }
+        ],
+        "prerequisite": {
+          "icon": "Database",
+          "title": "AMC enabled, DSP running",
+          "text": "Amazon Marketing Cloud on the account with DSP spend. Without DSP there is no mix to analyse."
+        },
+        "preview": {
+          "w": 1400,
+          "h": 324
+        },
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-amc-media-mix/main/.github/page/hero.png",
+        "mini": {
+          "k": "kpis",
+          "t": "Media Mix Overview",
+          "kpis": [
+            [
+              "$143.3K",
+              "Total Spend"
+            ],
+            [
+              "3,580",
+              "New Customers"
+            ],
+            [
+              "$40.03",
+              "Cost per New"
+            ],
+            [
+              "4.5x",
+              "ROAS"
+            ]
+          ],
+          "bars": [
+            [
+              94,
+              56
+            ],
+            [
+              20,
+              38
+            ],
+            [
+              20,
+              10
+            ],
+            [
+              10,
+              13
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "trackiq-amazon-amc-ntb-campaigns",
+      "title": "TrackIQ: Amazon AMC New-to-Brand Campaign Scorecard",
+      "category": "amc",
+      "version": "1.0.0",
+      "updated": "2026-09-21",
+      "summary": "Ranks every campaign Amazon Marketing Cloud can see \u2014 Sponsored Products, Sponsored Brands, Sponsored Display and DSP \u2014 by how many of its purchases came from new-to-brand customers, month over month, and where the campaign's spend can be matched, what each new customer cost; so the campaigns that recruit are funded and the ones that only harvest repeat buyers are named.",
+      "changelog": "First public release.",
+      "requires": {
+        "mcp": [
+          "trackiq"
+        ],
+        "tools": [
+          "list_marketplaces",
+          "get_amc_ntb_purchases",
+          "get_campaigns",
+          "get_dsp_performance"
+        ],
+        "filesystem": false,
+        "network": false,
+        "third_party_apis": []
+      },
+      "delivery": {
+        "methods": [
+          "in-chat",
+          "file",
+          "slack",
+          "n8n",
+          "email"
+        ],
+        "default": "in-chat",
+        "note": "in-chat always works and is the fallback. Outward sends confirm first."
+      },
+      "fallback": "",
+      "homepage": "https://trackiq.com/skills/trackiq-amazon-amc-ntb-campaigns",
+      "license": "MIT",
+      "plugin": "trackiq-amazon-amc-ntb-campaigns",
+      "repository": "https://github.com/TrackIQ-HQ/trackiq-amazon-amc-ntb-campaigns",
+      "install": {
+        "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-amc-ntb-campaigns@trackiq",
+        "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-amc-ntb-campaigns/releases/latest/download/trackiq-amazon-amc-ntb-campaigns.zip",
+        "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-amc-ntb-campaigns/releases/latest/download/trackiq-amazon-amc-ntb-campaigns-1.0.0.zip"
+      },
+      "page": {
+        "annotation": "Which campaigns recruit, and which harvest.",
+        "overview": "Ranks every campaign AMC can see \u2014 Sponsored Ads and DSP \u2014 by how many buyers were new to the brand, and what each new customer cost.",
+        "features": [
+          {
+            "icon": "Target",
+            "title": "Scores every campaign",
+            "text": "Sponsored Products, Brands, Display and DSP on one definition."
+          },
+          {
+            "icon": "Users",
+            "title": "Separates recruit from harvest",
+            "text": "Against the account's own new-to-brand share."
+          },
+          {
+            "icon": "Wallet",
+            "title": "Prices each new customer",
+            "text": "Spend matched by exact campaign name, never guessed."
+          },
+          {
+            "icon": "TrendingDown",
+            "title": "Flags drifting recruiters",
+            "text": "Audiences running out of new customers."
+          },
+          {
+            "icon": "ShieldCheck",
+            "title": "Protects the harvesters",
+            "text": "Brand and remarketing judged on ROAS, as they should be."
+          }
+        ],
+        "examples": [
+          {
+            "title": "The scorecard",
+            "text": "Every campaign's class, new-to-brand share and cost per new customer.",
+            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-amc-ntb-campaigns/main/.github/page/ex-1.png"
+          },
+          {
+            "title": "Month by month",
+            "text": "New-to-brand share over three months, with the drifting recruiter flagged.",
+            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-amc-ntb-campaigns/main/.github/page/ex-2.png"
+          },
+          {
+            "title": "What to do",
+            "text": "Fund, refresh or leave \u2014 three lines at most.",
+            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-amc-ntb-campaigns/main/.github/page/ex-3.png"
+          }
+        ],
+        "prerequisite": {
+          "icon": "Database",
+          "title": "AMC on the account",
+          "text": "Amazon Marketing Cloud enabled. Without it the skill stops and says so."
+        },
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-amc-ntb-campaigns/main/.github/page/hero.png",
+        "mini": {
+          "k": "table",
+          "t": "New-to-Brand by Campaign",
+          "cols": [
+            "Campaign",
+            "NTB",
+            "Spend",
+            "Per New",
+            "Class"
+          ],
+          "rows": [
+            [
+              "Patio Lighting \u2014 Generic",
+              "68%",
+              "$9,100",
+              "$6",
+              [
+                "Recruiter",
+                "g"
+              ]
+            ],
+            [
+              "In-market: Patio & Garden",
+              "72%",
+              "$9,380",
+              "$19",
+              [
+                "Recruiter",
+                "g"
+              ]
+            ],
+            [
+              "Outdoor Entertainers",
+              "58%",
+              "$10,120",
+              "$36",
+              [
+                "Drifting",
+                "w"
+              ]
+            ],
+            [
+              "Brand \u2014 Exact",
+              "12%",
+              "$6,200",
+              "$31",
+              [
+                "Harvester",
+                "n"
+              ]
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "trackiq-amazon-amc-ntb-products",
+      "title": "TrackIQ: Amazon AMC New-to-Brand Products",
+      "category": "amc",
+      "version": "1.0.0",
+      "updated": "2026-09-21",
+      "summary": "Uses Amazon Marketing Cloud to find which products bring new customers into a brand and which mostly sell to people who already buy it \u2014 new-to-brand share by ASIN, month by month, the gateway products worth more ad weight, the retention products that need less, and how much Sponsored Products and Display spend each group gets today.",
+      "changelog": "First public release.",
+      "requires": {
+        "mcp": [
+          "trackiq"
+        ],
+        "tools": [
+          "list_marketplaces",
+          "get_amc_ntb_asins",
+          "get_product_ads",
+          "get_product_performance"
+        ],
+        "filesystem": false,
+        "network": false,
+        "third_party_apis": []
+      },
+      "delivery": {
+        "methods": [
+          "in-chat",
+          "file",
+          "slack",
+          "n8n",
+          "email"
+        ],
+        "default": "in-chat",
+        "note": "in-chat always works and is the fallback. Outward sends confirm first."
+      },
+      "fallback": "",
+      "homepage": "https://trackiq.com/skills/trackiq-amazon-amc-ntb-products",
+      "license": "MIT",
+      "plugin": "trackiq-amazon-amc-ntb-products",
+      "repository": "https://github.com/TrackIQ-HQ/trackiq-amazon-amc-ntb-products",
+      "install": {
+        "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-amc-ntb-products@trackiq",
+        "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-amc-ntb-products/releases/latest/download/trackiq-amazon-amc-ntb-products.zip",
+        "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-amc-ntb-products/releases/latest/download/trackiq-amazon-amc-ntb-products-1.0.0.zip"
+      },
+      "page": {
+        "annotation": "Find the products new customers buy first.",
+        "overview": "Uses Amazon Marketing Cloud to find the gateway products new customers start with \u2014 and whether the ad spend follows them.",
+        "features": [
+          {
+            "icon": "Users",
+            "title": "Finds gateway products",
+            "text": "The ASINs new-to-brand customers most often buy first."
+          },
+          {
+            "icon": "Scale",
+            "title": "Classifies against your account",
+            "text": "Gateway, retention or mixed, relative to your own median."
+          },
+          {
+            "icon": "CalendarRange",
+            "title": "Compares month by month",
+            "text": "Three months side by side, never added together."
+          },
+          {
+            "icon": "Wallet",
+            "title": "Checks the funding gap",
+            "text": "Each product's share of new customers against its share of ad spend."
+          },
+          {
+            "icon": "ArrowRightLeft",
+            "title": "Recommends one move",
+            "text": "From overfunded retention to underfunded gateways, in two steps."
+          }
+        ],
+        "examples": [
+          {
+            "title": "Where new customers start",
+            "text": "Each product's share of new customers against its share of ad spend.",
+            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-amc-ntb-products/main/.github/page/ex-1.png"
+          },
+          {
+            "title": "Month by month",
+            "text": "New-to-brand share over three months, compared, never added.",
+            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-amc-ntb-products/main/.github/page/ex-2.png"
+          },
+          {
+            "title": "The move",
+            "text": "From overfunded retention to underfunded gateways.",
+            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-amc-ntb-products/main/.github/page/ex-3.png"
+          }
+        ],
+        "prerequisite": {
+          "icon": "Database",
+          "title": "AMC on the account",
+          "text": "Amazon Marketing Cloud enabled. Without it the skill stops and says so."
+        },
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-amc-ntb-products/main/.github/page/hero.png",
+        "mini": {
+          "k": "table",
+          "t": "New-to-Brand by Product",
+          "cols": [
+            "Product",
+            "NTB",
+            "New Cust.",
+            "Spend",
+            "Class"
+          ],
+          "rows": [
+            [
+              "Solar String Lights 2-pack",
+              "61%",
+              "31%",
+              "13%",
+              [
+                "Gateway",
+                "g"
+              ]
+            ],
+            [
+              "48ft String Lights",
+              "22%",
+              "19%",
+              "50%",
+              [
+                "Retention",
+                "w"
+              ]
+            ],
+            [
+              "Smokeless Fire Pit 19in",
+              "57%",
+              "17%",
+              "10%",
+              [
+                "Gateway",
+                "g"
+              ]
+            ],
+            [
+              "Globe Lights 25ft",
+              "55%",
+              "15%",
+              "5%",
+              [
+                "Gateway",
+                "g"
+              ]
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "trackiq-amazon-dsp-performance",
+      "title": "TrackIQ: Amazon DSP Audience and Creative Performance",
+      "category": "amc",
+      "version": "1.0.1",
+      "updated": "2026-09-21",
+      "summary": "Breaks Amazon DSP down by audience, creative, inventory source, technology and geography to show which segments actually recruit customers and which burn impressions. Ranks on new-to-brand purchases, detail page views and cost per action rather than ROAS, because DSP revenue is not returned at these dimensions.",
+      "changelog": "Moves to the new Amazon AMC & DSP category. No change to what the skill does.",
+      "requires": {
+        "mcp": [
+          "trackiq"
+        ],
+        "tools": [
+          "get_dsp_performance",
+          "list_marketplaces"
+        ],
+        "filesystem": false,
+        "network": false,
+        "third_party_apis": []
+      },
+      "delivery": {
+        "methods": [
+          "in-chat",
+          "file",
+          "slack",
+          "n8n",
+          "email"
+        ],
+        "default": "in-chat",
+        "note": "in-chat always works and is the fallback. Outward sends confirm first."
+      },
+      "homepage": "https://trackiq.com/skills/trackiq-amazon-dsp-performance",
+      "license": "MIT",
+      "plugin": "trackiq-amazon-dsp-performance",
+      "repository": "https://github.com/TrackIQ-HQ/trackiq-amazon-dsp-performance",
+      "install": {
+        "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-dsp-performance@trackiq",
+        "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-dsp-performance/releases/latest/download/trackiq-amazon-dsp-performance.zip",
+        "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-dsp-performance/releases/latest/download/trackiq-amazon-dsp-performance-1.0.1.zip"
+      },
+      "page": {
+        "annotation": "See which audiences actually recruit.",
+        "overview": "Breaks Amazon DSP down by audience, creative, inventory, technology and geography, ranked on new-to-brand rather than ROAS.",
+        "features": [
+          {
+            "icon": "Users",
+            "title": "Ranks audiences by recruitment",
+            "text": "Cost per new-to-brand purchase against the median of each dimension."
+          },
+          {
+            "icon": "Layers",
+            "title": "Covers every dimension",
+            "text": "Audience, creative, inventory source, technology and geography."
+          },
+          {
+            "icon": "Filter",
+            "title": "Shows where the funnel breaks",
+            "text": "Page views without add-to-carts read as a listing problem, not a bad segment."
+          },
+          {
+            "icon": "Copy",
+            "title": "Catches overlapping segments",
+            "text": "Segments that share the same impressions counted as one finding."
+          },
+          {
+            "icon": "Scissors",
+            "title": "Ends in scale, fix or cut",
+            "text": "Three short lists. Everything else stays quiet."
+          }
+        ],
+        "examples": [
+          {
+            "title": "By audience",
+            "text": "Each segment ranked on cost per new-to-brand purchase against the median.",
+            "crop": [
+              48,
+              48,
+              416,
+              301
+            ],
+            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-dsp-performance/main/.github/page/ex-1.png"
+          },
+          {
+            "title": "Overlaps and funnel breaks",
+            "text": "Segments sharing one pool of impressions, and where page views stop turning into carts.",
+            "crop": [
+              492,
+              48,
+              416,
+              301
+            ],
+            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-dsp-performance/main/.github/page/ex-2.png"
+          },
+          {
+            "title": "Scale, fix, cut",
+            "text": "Three short lists, each with the spend at stake and the reason.",
+            "crop": [
+              936,
+              48,
+              416,
+              301
+            ],
+            "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-dsp-performance/main/.github/page/ex-3.png"
+          }
+        ],
+        "prerequisite": {
+          "icon": "Database",
+          "title": "A DSP account with spend",
+          "text": "Not every account runs DSP. The skill checks for spend in the window before promising a report."
+        },
+        "preview": {
+          "w": 1400,
+          "h": 397
+        },
+        "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-dsp-performance/main/.github/page/hero.png",
+        "mini": {
+          "k": "kpis",
+          "t": "DSP Performance",
+          "tabs": [
+            "Audience",
+            "Creative",
+            "Geography",
+            "Inventory"
+          ],
+          "kpis": [
+            [
+              "891",
+              "New-to-brand",
+              "\u25b2 18%"
+            ],
+            [
+              "$46.22",
+              "Cost per NTB",
+              "\u25bc 9%",
+              "g"
+            ],
+            [
+              "$41.2K",
+              "Spend",
+              "\u25b2 4%",
+              "n"
+            ],
+            [
+              "5",
+              "Segments"
+            ]
+          ],
+          "bars": [
+            100,
+            82,
+            55,
+            22,
+            20,
+            64,
+            48,
+            36,
+            28
           ]
         }
       }
@@ -1057,14 +1798,14 @@
             "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-category-priority-keywords/main/.github/page/ex-3.png"
           }
         ],
-        "preview": {
-          "w": 1400,
-          "h": 408
-        },
         "prerequisite": {
           "icon": "Database",
           "title": "Search Query Performance data",
           "text": "SQP ingestion running on the account. It is often sparse on newer brands, so the skill checks first."
+        },
+        "preview": {
+          "w": 1400,
+          "h": 408
         },
         "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-category-priority-keywords/main/.github/page/hero.png",
         "mini": {
@@ -1231,14 +1972,14 @@
             "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-rank-movement/main/.github/page/ex-3.png"
           }
         ],
-        "preview": {
-          "w": 1400,
-          "h": 423
-        },
         "prerequisite": {
           "icon": "History",
           "title": "Last week's run",
           "text": "Movement compares against the previous run's saved file. The first run sets the baseline."
+        },
+        "preview": {
+          "w": 1400,
+          "h": 423
         },
         "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-rank-movement/main/.github/page/hero.png",
         "mini": {
@@ -1405,14 +2146,14 @@
             "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-rank-readiness/main/.github/page/ex-3.png"
           }
         ],
-        "preview": {
-          "w": 1400,
-          "h": 599
-        },
         "prerequisite": {
           "icon": "Target",
           "title": "One ASIN and its context",
           "text": "Price, rating, reviews and days of cover. Optional, but they state the two hard gates."
+        },
+        "preview": {
+          "w": 1400,
+          "h": 599
         },
         "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-rank-readiness/main/.github/page/hero.png",
         "mini": {
@@ -1581,14 +2322,14 @@
             "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-search-visibility-audit/main/.github/page/ex-3.png"
           }
         ],
-        "preview": {
-          "w": 1400,
-          "h": 353
-        },
         "prerequisite": {
           "icon": "Database",
           "title": "Rank tracking set up",
           "text": "Tracked keywords in TrackIQ. Untracked queries are reported separately, never as not ranking."
+        },
+        "preview": {
+          "w": 1400,
+          "h": 353
         },
         "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-search-visibility-audit/main/.github/page/hero.png",
         "mini": {
@@ -1742,14 +2483,14 @@
             "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-share-of-shelf/main/.github/page/ex-3.png"
           }
         ],
-        "preview": {
-          "w": 1400,
-          "h": 408
-        },
         "prerequisite": {
           "icon": "ListChecks",
           "title": "A keyword basket",
           "text": "Run Category Priority Keywords first so every term carries a revenue figure."
+        },
+        "preview": {
+          "w": 1400,
+          "h": 408
         },
         "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-share-of-shelf/main/.github/page/hero.png",
         "mini": {
@@ -1905,14 +2646,14 @@
             "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-catalog-hygiene/main/.github/page/ex-3.png"
           }
         ],
-        "preview": {
-          "w": 1400,
-          "h": 422
-        },
         "prerequisite": {
           "icon": "Filter",
           "title": "An agreed scope",
           "text": "Page checks cost one scraper credit per ASIN, so the catalogue scope is agreed first."
+        },
+        "preview": {
+          "w": 1400,
+          "h": 422
         },
         "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-catalog-hygiene/main/.github/page/hero.png",
         "mini": {
@@ -2080,14 +2821,14 @@
             "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-competitor-teardown/main/.github/page/ex-3.png"
           }
         ],
-        "preview": {
-          "w": 1400,
-          "h": 371
-        },
         "prerequisite": {
           "icon": "Users",
           "title": "A competitor set",
           "text": "Three to five competitor ASINs. Ask, or take them from Share of Shelf."
+        },
+        "preview": {
+          "w": 1400,
+          "h": 371
         },
         "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-competitor-teardown/main/.github/page/hero.png",
         "mini": {
@@ -2244,14 +2985,14 @@
             "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-listing-monitor/main/.github/page/ex-2.png"
           }
         ],
-        "preview": {
-          "w": 1400,
-          "h": 545
-        },
         "prerequisite": {
           "icon": "HardDrive",
           "title": "Snapshot storage",
           "text": "It's a diff, so dated snapshots are kept between daily runs. The first run only sets a baseline."
+        },
+        "preview": {
+          "w": 1400,
+          "h": 545
         },
         "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-listing-monitor/main/.github/page/hero.png",
         "mini": {
@@ -2431,14 +3172,14 @@
             "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-listing-optimizer/main/.github/page/ex-4.png"
           }
         ],
-        "preview": {
-          "w": 1400,
-          "h": 457
-        },
         "prerequisite": {
           "icon": "Target",
           "title": "One listing to rewrite",
           "text": "The ASIN to work on. Current backend terms aren't in any tool, so they're checked by hand."
+        },
+        "preview": {
+          "w": 1400,
+          "h": 457
         },
         "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-listing-optimizer/main/.github/page/hero.png",
         "mini": {
@@ -2618,14 +3359,14 @@
             "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-review-miner/main/.github/page/ex-4.png"
           }
         ],
-        "preview": {
-          "w": 1400,
-          "h": 417
-        },
         "prerequisite": {
           "icon": "Users",
           "title": "A competitor set",
           "text": "Three to five competitor ASINs to sample against your own catalogue."
+        },
+        "preview": {
+          "w": 1400,
+          "h": 417
         },
         "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-review-miner/main/.github/page/hero.png",
         "mini": {
@@ -2780,14 +3521,14 @@
             "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-demand-forecast/main/.github/page/ex-3.png"
           }
         ],
-        "preview": {
-          "w": 1400,
-          "h": 395
-        },
         "prerequisite": {
           "icon": "CalendarClock",
           "title": "Lead time & service level",
           "text": "Defaults of 45 days and 95%, labelled as assumptions if you don't supply them."
+        },
+        "preview": {
+          "w": 1400,
+          "h": 395
         },
         "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-demand-forecast/main/.github/page/hero.png",
         "mini": {
@@ -2931,14 +3672,14 @@
             "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-excess-inventory/main/.github/page/ex-3.png"
           }
         ],
-        "preview": {
-          "w": 1400,
-          "h": 423
-        },
         "prerequisite": {
           "icon": "Wallet",
           "title": "Unit cost",
           "text": "What you paid per unit, to value capital tied up. Without it, stock is valued at selling price."
+        },
+        "preview": {
+          "w": 1400,
+          "h": 423
         },
         "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-excess-inventory/main/.github/page/hero.png",
         "mini": {
@@ -3104,14 +3845,14 @@
             "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-inventory-ad-throttle/main/.github/page/ex-3.png"
           }
         ],
-        "preview": {
-          "w": 1400,
-          "h": 405
-        },
         "prerequisite": {
           "icon": "CalendarClock",
           "title": "A lead time",
           "text": "Days from purchase order to sellable. Defaults to 45, labelled an assumption."
+        },
+        "preview": {
+          "w": 1400,
+          "h": 405
         },
         "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-inventory-ad-throttle/main/.github/page/hero.png",
         "mini": {
@@ -3275,14 +4016,14 @@
             "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-restock-priority/main/.github/page/ex-3.png"
           }
         ],
-        "preview": {
-          "w": 1400,
-          "h": 418
-        },
         "prerequisite": {
           "icon": "CalendarClock",
           "title": "A lead time",
           "text": "Without it the report can say when stock runs out, but not when to order."
+        },
+        "preview": {
+          "w": 1400,
+          "h": 418
         },
         "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-restock-priority/main/.github/page/hero.png",
         "mini": {
@@ -3429,14 +4170,14 @@
             "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-stockout-impact/main/.github/page/ex-3.png"
           }
         ],
-        "preview": {
-          "w": 1400,
-          "h": 422
-        },
         "prerequisite": {
           "icon": "CalendarClock",
           "title": "The stockout window",
           "text": "When the ASIN went to zero and when it came back. The snapshot only shows today."
+        },
+        "preview": {
+          "w": 1400,
+          "h": 422
         },
         "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-stockout-impact/main/.github/page/hero.png",
         "mini": {
@@ -3581,14 +4322,14 @@
             "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-daily-snacks-email/main/.github/page/ex-3.png"
           }
         ],
-        "preview": {
-          "w": 1400,
-          "h": 996
-        },
         "prerequisite": {
           "icon": "Package",
           "title": "Your lines and hero ASINs",
           "text": "Set once in account.md \u2014 the product lines and heroes the email ranks and tracks."
+        },
+        "preview": {
+          "w": 1400,
+          "h": 996
         },
         "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-daily-snacks-email/main/.github/page/hero.png",
         "mini": {
@@ -3739,14 +4480,14 @@
             "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-launch-scorecard/main/.github/page/ex-3.png"
           }
         ],
-        "preview": {
-          "w": 1400,
-          "h": 401
-        },
         "prerequisite": {
           "icon": "Target",
           "title": "Launch date & a target",
           "text": "Units or revenue by week twelve. Without a target there's no scorecard, only a chart."
+        },
+        "preview": {
+          "w": 1400,
+          "h": 401
         },
         "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-launch-scorecard/main/.github/page/hero.png",
         "mini": {
@@ -3892,14 +4633,14 @@
             "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-monthly-business-review/main/.github/page/ex-3.png"
           }
         ],
-        "preview": {
-          "w": 1400,
-          "h": 460
-        },
         "prerequisite": {
           "icon": "Settings",
           "title": "Your account set up once",
           "text": "Brand, marketplace and product lines in account.md \u2014 shared by every TrackIQ skill."
+        },
+        "preview": {
+          "w": 1400,
+          "h": 460
         },
         "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-monthly-business-review/main/.github/page/hero.png",
         "mini": {
@@ -4056,14 +4797,14 @@
             "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-sales-movers/main/.github/page/ex-3.png"
           }
         ],
-        "preview": {
-          "w": 1400,
-          "h": 355
-        },
         "prerequisite": {
           "icon": "ArrowRightLeft",
           "title": "Two periods to compare",
           "text": "The same length and the same weekdays \u2014 the skill checks before it decomposes."
+        },
+        "preview": {
+          "w": 1400,
+          "h": 355
         },
         "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-sales-movers/main/.github/page/hero.png",
         "mini": {
@@ -4230,14 +4971,14 @@
             "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-weekly-executive-report/main/.github/page/ex-3.png"
           }
         ],
-        "preview": {
-          "w": 1400,
-          "h": 793
-        },
         "prerequisite": {
           "icon": "Package",
           "title": "Lines and inventory bands",
           "text": "Set once in account.md \u2014 how ASINs group into lines and your days-of-cover thresholds."
+        },
+        "preview": {
+          "w": 1400,
+          "h": 793
         },
         "hero": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-weekly-executive-report/main/.github/page/hero.png",
         "mini": {
