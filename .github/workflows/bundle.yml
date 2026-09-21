@@ -1,0 +1,51 @@
+name: Rebuild the all-skills bundle
+
+# A skill ships from its own repo, and a cross-repo trigger would need a
+# stored personal token. Polling needs none: each run compares every skill's
+# latest release tag with the manifest beside the bundle, and only rebuilds
+# when a tag moved or the registry gained or lost a skill.
+on:
+  schedule:
+    - cron: "17 * * * *"
+  push:
+    branches: [main]
+    paths: [registry.json, scripts/build_bundle.py]
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Rebuild even if no skill changed
+        type: boolean
+        default: false
+
+concurrency:
+  group: bundle
+  cancel-in-progress: false
+
+jobs:
+  bundle:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check skills and rebuild if needed
+        id: build
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python scripts/build_bundle.py ${{ inputs.force && '--force' || '' }}
+
+      # Replace the assets on the latest release in place, so the download
+      # link on trackiq.com/skills (releases/latest/download/...) never moves.
+      - name: Publish
+        if: steps.build.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag=$(gh release view --repo "$GITHUB_REPOSITORY" --json tagName -q .tagName)
+          gh release upload "$tag" dist/trackiq-skills.zip dist/trackiq-skills.manifest.json \
+            --repo "$GITHUB_REPOSITORY" --clobber
