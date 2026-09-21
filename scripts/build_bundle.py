@@ -14,7 +14,7 @@ release zip, checks it unpacks to <skill-name>/SKILL.md, and writes:
 and prints changed=true for the workflow. GITHUB_TOKEN, if set, is used for
 API calls (unauthenticated calls are capped at 60 an hour).
 """
-import argparse, io, json, os, sys, urllib.error, urllib.request, zipfile
+import argparse, io, json, os, sys, time, urllib.error, urllib.request, zipfile
 
 ORG = "TrackIQ-HQ"
 REPO = "amazon-seller-skills"
@@ -29,8 +29,19 @@ def fetch(url, api=False):
         req.add_header("Accept", "application/vnd.github+json")
         if os.environ.get("GITHUB_TOKEN"):
             req.add_header("Authorization", "Bearer " + os.environ["GITHUB_TOKEN"])
-    with urllib.request.urlopen(req, timeout=60) as r:
-        return r.read()
+    # GitHub's release downloads return the odd 5xx, especially just after an
+    # asset is replaced; retry those rather than fail the hourly run.
+    for attempt in range(4):
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                return r.read()
+        except urllib.error.HTTPError as e:
+            if e.code < 500 or attempt == 3:
+                raise
+        except urllib.error.URLError:
+            if attempt == 3:
+                raise
+        time.sleep(5 * (attempt + 1))
 
 
 def published_manifest():
