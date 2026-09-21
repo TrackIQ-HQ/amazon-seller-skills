@@ -532,8 +532,8 @@
         "source": "github",
         "repo": "TrackIQ-HQ/trackiq-amazon-branded-search"
       },
-      "description": "TrackIQ: Amazon Branded vs. Non-Branded Search — splits every Amazon Sponsored Products and Sponsored Brands search term into branded, competitor, product-targeting and generic buckets, then shows where the ad money really goes — how much is spent on shoppers who already typed the brand, what generic search returns once brand is taken out, whether competitor conquesting pays — and checks organic share on the brand's own name before calling brand spend defence or waste.",
-      "version": "1.0.0",
+      "description": "TrackIQ: Amazon Branded vs. Non-Branded Search — splits every Amazon Sponsored Products and Sponsored Brands search term into branded, competitor, product-targeting and generic buckets, then shows where the ad money really goes — how much is spent on shoppers who already typed the brand, what generic search returns once brand is taken out, whether competitor conquesting pays — and checks the brand's purchase share on its own name before calling brand spend defence or waste.",
+      "version": "1.1.0",
       "author": {
         "name": "TrackIQ"
       },
@@ -555,8 +555,8 @@
         "source": "github",
         "repo": "TrackIQ-HQ/trackiq-amazon-campaign-structure-audit"
       },
-      "description": "TrackIQ: Amazon Sponsored Ads Structure Audit — audits how an Amazon Sponsored Ads account is built rather than how it performed last week — ad groups crowded with unrelated products, the same product advertised in a dozen ad groups competing with itself, keywords stacked in every match type inside one ad group, spend sitting outside any portfolio, and selling products with no ad at all — ranked by the spend each problem touches, with a fix order the team can work through.",
-      "version": "1.0.0",
+      "description": "TrackIQ: Amazon Sponsored Ads Structure Audit — audits how an Amazon Sponsored Ads account is built rather than how it performed last week — ad groups crowded with unrelated products, the same product bid twice on one search from different ad groups, keywords stacked in every match type inside one ad group, spend sitting outside any portfolio, and selling products with no ad at all — ranked by the spend each problem touches, with a fix order the team can work through.",
+      "version": "1.1.0",
       "author": {
         "name": "TrackIQ"
       },
@@ -579,7 +579,7 @@
         "repo": "TrackIQ-HQ/trackiq-amazon-amc-conversion-lag"
       },
       "description": "TrackIQ: Amazon AMC Conversion Lag & Attribution Window — reads Amazon Marketing Cloud's time-to-conversion data to show how long shoppers take between their first ad touch and purchase — the share that buys within the hour, the day and the week, and how that shifts month to month — then turns it into two decisions: which attribution window to report on, and how many days ahead of a sales event to start upper-funnel spend.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": {
         "name": "TrackIQ"
       },
@@ -603,7 +603,7 @@
         "repo": "TrackIQ-HQ/trackiq-amazon-amc-ntb-campaigns"
       },
       "description": "TrackIQ: Amazon AMC New-to-Brand Campaign Scorecard — ranks every campaign Amazon Marketing Cloud can see — Sponsored Products, Sponsored Brands, Sponsored Display and DSP — by how many of its purchases came from new-to-brand customers, month over month, and where the campaign's spend can be matched, what each new customer cost; so the campaigns that recruit are funded and the ones that only harvest repeat buyers are named.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": {
         "name": "TrackIQ"
       },
@@ -627,7 +627,7 @@
         "repo": "TrackIQ-HQ/trackiq-amazon-amc-ntb-products"
       },
       "description": "TrackIQ: Amazon AMC New-to-Brand Products — uses Amazon Marketing Cloud to find which products bring new customers into a brand and which mostly sell to people who already buy it — new-to-brand share by ASIN, month by month, the gateway products worth more ad weight, the retention products that need less, and how much Sponsored Products and Display spend each group gets today.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": {
         "name": "TrackIQ"
       },

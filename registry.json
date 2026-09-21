@@ -147,10 +147,10 @@
       "name": "trackiq-amazon-branded-search",
       "title": "TrackIQ: Amazon Branded vs. Non-Branded Search",
       "category": "advertising",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "updated": "2026-09-21",
-      "summary": "Splits every Amazon Sponsored Products and Sponsored Brands search term into branded, competitor, product-targeting and generic buckets, then shows where the ad money really goes \u2014 how much is spent on shoppers who already typed the brand, what generic search returns once brand is taken out, whether competitor conquesting pays \u2014 and checks organic share on the brand's own name before calling brand spend defence or waste.",
-      "changelog": "First public release.",
+      "summary": "Splits every Amazon Sponsored Products and Sponsored Brands search term into branded, competitor, product-targeting and generic buckets, then shows where the ad money really goes \u2014 how much is spent on shoppers who already typed the brand, what generic search returns once brand is taken out, whether competitor conquesting pays \u2014 and checks the brand's purchase share on its own name before calling brand spend defence or waste.",
+      "changelog": "Counts product targeting on the brand's own ASINs as branded, merges near-duplicate queries, stops paging once 97% of channel spend is covered, and reads Search Query Performance week by week as a purchase share covering organic and paid, marking thin weeks.",
       "requires": {
         "mcp": [
           "trackiq"
@@ -159,7 +159,9 @@
           "list_marketplaces",
           "get_search_terms",
           "get_targets",
-          "get_search_query_performance"
+          "get_search_query_performance",
+          "get_product_performance",
+          "get_campaigns"
         ],
         "filesystem": false,
         "network": false,
@@ -184,7 +186,7 @@
       "install": {
         "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-branded-search@trackiq",
         "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-branded-search/releases/latest/download/trackiq-amazon-branded-search.zip",
-        "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-branded-search/releases/latest/download/trackiq-amazon-branded-search-1.0.0.zip"
+        "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-branded-search/releases/latest/download/trackiq-amazon-branded-search-1.1.0.zip"
       },
       "page": {
         "annotation": "What your ads return without the brand name.",
@@ -203,7 +205,7 @@
           {
             "icon": "ShieldCheck",
             "title": "Checks brand defence",
-            "text": "Organic share on the brand's own name before calling spend waste."
+            "text": "The brand's purchase share on its own name before calling spend waste."
           },
           {
             "icon": "Users",
@@ -224,7 +226,7 @@
           },
           {
             "title": "Is the brand spend defence?",
-            "text": "Organic purchase share on branded queries, and the test to run.",
+            "text": "Purchase share on branded queries, and the test to run.",
             "image": "https://raw.githubusercontent.com/TrackIQ-HQ/trackiq-amazon-branded-search/main/.github/page/ex-2.png"
           },
           {
@@ -252,7 +254,7 @@
               "Blended ROAS"
             ],
             [
-              "15%",
+              "18%",
               "Branded Spend"
             ],
             [
@@ -263,11 +265,11 @@
           "bars": [
             [
               69,
-              15
+              19
             ],
             [
               8,
-              8
+              4
             ]
           ]
         }
@@ -600,10 +602,10 @@
       "name": "trackiq-amazon-campaign-structure-audit",
       "title": "TrackIQ: Amazon Sponsored Ads Structure Audit",
       "category": "advertising",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "updated": "2026-09-21",
-      "summary": "Audits how an Amazon Sponsored Ads account is built rather than how it performed last week \u2014 ad groups crowded with unrelated products, the same product advertised in a dozen ad groups competing with itself, keywords stacked in every match type inside one ad group, spend sitting outside any portfolio, and selling products with no ad at all \u2014 ranked by the spend each problem touches, with a fix order the team can work through.",
-      "changelog": "First public release.",
+      "summary": "Audits how an Amazon Sponsored Ads account is built rather than how it performed last week \u2014 ad groups crowded with unrelated products, the same product bid twice on one search from different ad groups, keywords stacked in every match type inside one ad group, spend sitting outside any portfolio, and selling products with no ad at all \u2014 ranked by the spend each problem touches, with a fix order the team can work through.",
+      "changelog": "Judges live entities only (an enabled ad in a paused campaign no longer counts), replaces the ad-groups-per-product count with a check for one keyword bid on the same product from several ad groups, and reads portfolio coverage from portfolio_id.",
       "requires": {
         "mcp": [
           "trackiq"
@@ -640,7 +642,7 @@
       "install": {
         "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-campaign-structure-audit@trackiq",
         "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-campaign-structure-audit/releases/latest/download/trackiq-amazon-campaign-structure-audit.zip",
-        "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-campaign-structure-audit/releases/latest/download/trackiq-amazon-campaign-structure-audit-1.0.0.zip"
+        "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-campaign-structure-audit/releases/latest/download/trackiq-amazon-campaign-structure-audit-1.1.0.zip"
       },
       "page": {
         "annotation": "See why the account is hard to steer.",
@@ -654,7 +656,7 @@
           {
             "icon": "Copy",
             "title": "Catches self-competition",
-            "text": "One product advertised in a dozen ad groups at once."
+            "text": "One product bid twice on the same search from different ad groups."
           },
           {
             "icon": "Filter",
@@ -727,12 +729,12 @@
               ]
             ],
             [
-              "Product in 11 ad groups",
-              "48ft String Lights",
+              "Keyword bid twice",
+              "\u201cstring lights\u201d exact",
               "$6,400",
-              "11",
+              "3",
               [
-                "Pause 8",
+                "Negate 2",
                 "w"
               ]
             ],
@@ -938,10 +940,10 @@
       "name": "trackiq-amazon-amc-conversion-lag",
       "title": "TrackIQ: Amazon AMC Conversion Lag & Attribution Window",
       "category": "amc",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "updated": "2026-09-21",
       "summary": "Reads Amazon Marketing Cloud's time-to-conversion data to show how long shoppers take between their first ad touch and purchase \u2014 the share that buys within the hour, the day and the week, and how that shifts month to month \u2014 then turns it into two decisions: which attribution window to report on, and how many days ahead of a sales event to start upper-funnel spend.",
-      "changelog": "First public release.",
+      "changelog": "Event lead time now follows the attribution-window reading: five days once a tenth of purchases land after a week. Channel volume uses brand purchases, matching the curve.",
       "requires": {
         "mcp": [
           "trackiq"
@@ -974,7 +976,7 @@
       "install": {
         "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-amc-conversion-lag@trackiq",
         "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-amc-conversion-lag/releases/latest/download/trackiq-amazon-amc-conversion-lag.zip",
-        "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-amc-conversion-lag/releases/latest/download/trackiq-amazon-amc-conversion-lag-1.0.0.zip"
+        "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-amc-conversion-lag/releases/latest/download/trackiq-amazon-amc-conversion-lag-1.1.0.zip"
       },
       "page": {
         "annotation": "How long shoppers take to buy.",
@@ -1231,10 +1233,10 @@
       "name": "trackiq-amazon-amc-ntb-campaigns",
       "title": "TrackIQ: Amazon AMC New-to-Brand Campaign Scorecard",
       "category": "amc",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "updated": "2026-09-21",
       "summary": "Ranks every campaign Amazon Marketing Cloud can see \u2014 Sponsored Products, Sponsored Brands, Sponsored Display and DSP \u2014 by how many of its purchases came from new-to-brand customers, month over month, and where the campaign's spend can be matched, what each new customer cost; so the campaigns that recruit are funded and the ones that only harvest repeat buyers are named.",
-      "changelog": "First public release.",
+      "changelog": "Pulls spend for the prior month too, so the cost-per-new-customer trend can be computed, flags only recruiters on it, and shows a dash rather than a cost for harvesters.",
       "requires": {
         "mcp": [
           "trackiq"
@@ -1268,7 +1270,7 @@
       "install": {
         "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-amc-ntb-campaigns@trackiq",
         "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-amc-ntb-campaigns/releases/latest/download/trackiq-amazon-amc-ntb-campaigns.zip",
-        "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-amc-ntb-campaigns/releases/latest/download/trackiq-amazon-amc-ntb-campaigns-1.0.0.zip"
+        "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-amc-ntb-campaigns/releases/latest/download/trackiq-amazon-amc-ntb-campaigns-1.1.0.zip"
       },
       "page": {
         "annotation": "Which campaigns recruit, and which harvest.",
@@ -1382,10 +1384,10 @@
       "name": "trackiq-amazon-amc-ntb-products",
       "title": "TrackIQ: Amazon AMC New-to-Brand Products",
       "category": "amc",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "updated": "2026-09-21",
       "summary": "Uses Amazon Marketing Cloud to find which products bring new customers into a brand and which mostly sell to people who already buy it \u2014 new-to-brand share by ASIN, month by month, the gateway products worth more ad weight, the retention products that need less, and how much Sponsored Products and Display spend each group gets today.",
-      "changelog": "First public release.",
+      "changelog": "Recommends funding any product that recruits above the median with a positive gap, not only steady gateways, adds a halo check for products with little ad spend of their own, and classifies earlier months against their own median.",
       "requires": {
         "mcp": [
           "trackiq"
@@ -1419,7 +1421,7 @@
       "install": {
         "claude_code": "/plugin marketplace add TrackIQ-HQ/amazon-seller-skills\n/plugin install trackiq-amazon-amc-ntb-products@trackiq",
         "zip": "https://github.com/TrackIQ-HQ/trackiq-amazon-amc-ntb-products/releases/latest/download/trackiq-amazon-amc-ntb-products.zip",
-        "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-amc-ntb-products/releases/latest/download/trackiq-amazon-amc-ntb-products-1.0.0.zip"
+        "zip_pinned": "https://github.com/TrackIQ-HQ/trackiq-amazon-amc-ntb-products/releases/latest/download/trackiq-amazon-amc-ntb-products-1.1.0.zip"
       },
       "page": {
         "annotation": "Find the products new customers buy first.",
