@@ -25,7 +25,10 @@ Targeting · Search Query Performance · Organic Rank · Best Seller Rank · Buy
 History · Brand Analytics · Export
 
 
-Works with Claude, ChatGPT and Cursor. **[Get access →](https://trackiq.com/mcp)**
+Works with Claude, ChatGPT and Cursor. **[Get access →](https://l.trackiq.com)**
+
+Setting the connection up, the tool reference and what the data does that you
+would not expect: **[TrackIQ-HQ/amazon-mcp](https://github.com/TrackIQ-HQ/amazon-mcp)**.
 
 ---
 
