@@ -59,11 +59,15 @@ jobs:
       # trackiq.com/skills (releases/latest/download/...) never moves.
       # Uploads: all-skills bundle + manifest + every per-skill zip, so
       # claude.ai users can grab one at a time from the same page.
+      # gh upload with --clobber races internally when given many files in
+      # one call (deletes an asset mid-stream, then 404s). Upload one at a
+      # time; it's slower but each file either lands or fails on its own.
       - name: Publish Release assets
         if: steps.sync.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           tag=$(gh release view --repo "$GITHUB_REPOSITORY" --json tagName -q .tagName)
-          gh release upload "$tag" dist/trackiq-skills.zip dist/trackiq-skills.manifest.json dist/trackiq-*.zip \
-            --repo "$GITHUB_REPOSITORY" --clobber
+          for f in dist/trackiq-skills.zip dist/trackiq-skills.manifest.json dist/trackiq-*.zip; do
+            gh release upload "$tag" "$f" --repo "$GITHUB_REPOSITORY" --clobber
+          done
