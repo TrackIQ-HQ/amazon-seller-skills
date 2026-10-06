@@ -11,6 +11,38 @@ with it.
 
 ---
 
+## Getting the skills
+
+Every skill in this catalogue is vendored right here in `skills/<name>/`,
+auto-synced hourly from each skill's own repo. One download, all 30 skills.
+
+| You use… | Grab | Install |
+|---|---|---|
+| **Claude Code** (CLI, auto-updates) | the marketplace | `/plugin marketplace add TrackIQ-HQ/amazon-seller-skills`, then `/plugin install <name>@trackiq` per skill |
+| **Claude Code** (bulk from this repo) | the repo | Clone or Download ZIP → copy `skills/*` into `~/.claude/skills/`. All 30 installed, one command. |
+| **Claude Code** (bulk from a release) | `trackiq-skills.zip` on the [latest release](https://github.com/TrackIQ-HQ/amazon-seller-skills/releases/latest) | `unzip trackiq-skills.zip -d ~/.claude/skills` |
+| **claude.ai web / desktop / ChatGPT** | one `trackiq-<name>.zip` per skill, on the [latest release](https://github.com/TrackIQ-HQ/amazon-seller-skills/releases/latest) | Upload each zip through the Skills panel. One upload per skill — see the note below. |
+
+**Bulk install from this repo (Claude Code):**
+
+```bash
+git clone https://github.com/TrackIQ-HQ/amazon-seller-skills
+cp -r amazon-seller-skills/skills/* ~/.claude/skills/
+```
+
+To update later, `git pull` and re-copy. The `skills/` folder is kept in
+sync hourly against every sub-repo's latest release, so pulling the repo
+pulls every skill update.
+
+> **About claude.ai web uploads.** The uploader accepts one skill zip at a
+> time, with `<name>/SKILL.md` at the top. There is no multi-skill upload
+> format — it's a platform constraint on the claude.ai side, not something
+> we can bundle around. Downloading `amazon-seller-skills-main.zip` and
+> trying to upload *that* will fail: it's a repo, not a skill. Grab the
+> per-skill zips from the latest Release instead.
+
+---
+
 ## Powered by the TrackIQ MCP
 
 [![TrackIQ MCP — connect your AI assistant to Amazon data. 16 tools, full MCP access, $69/mo. Works with Claude, ChatGPT and Cursor.](.github/trackiq-mcp-banner.png)](https://trackiq.com/mcp)
@@ -32,30 +64,10 @@ would not expect: **[TrackIQ-HQ/amazon-mcp](https://github.com/TrackIQ-HQ/amazon
 
 ---
 
-## Install everything, one command
-
-```
-/plugin marketplace add TrackIQ-HQ/amazon-seller-skills
-/plugin install trackiq-amazon-daily-snacks-email@trackiq
-/plugin install trackiq-amazon-weekly-executive-report@trackiq
-/plugin install trackiq-amazon-category-priority-keywords@trackiq
-/plugin install trackiq-amazon-amc-media-mix@trackiq
-/plugin install trackiq-amazon-search-visibility-audit@trackiq
-/plugin install trackiq-amazon-rank-readiness@trackiq
-/plugin install trackiq-amazon-share-of-shelf@trackiq
-/plugin install trackiq-amazon-listing-monitor@trackiq
-```
-
-Installed this way, skills update themselves. Run
-`/plugin marketplace update` to force a check.
-
-Not on Claude Code? Each skill ships a `.zip` for manual upload to Claude
-web, Claude desktop or ChatGPT — see the skill's own README.
-
 ## The catalog
 
-Thirty skills across six areas. Each lives in its own repository and
-is referenced here by github source.
+Thirty skills across six areas. Each lives in its own repository and is
+vendored here under `skills/<name>/`.
 
 
 ### Amazon Sponsored Ads
@@ -135,7 +147,9 @@ is referenced here by github source.
 | How you installed | How you update |
 |---|---|
 | Plugin marketplace | Automatic. `/plugin marketplace update` forces it. |
-| Uploaded `.zip` | Ask your assistant *"is my TrackIQ Snacks skill current?"* — the skill checks the registry and tells you. Then re-upload. |
+| Repo clone (`skills/`) | `git pull && cp -r skills/* ~/.claude/skills/`. Hourly bot keeps `skills/` in sync. |
+| Release bundle (`trackiq-skills.zip`) | Re-download and unzip. Hourly bot keeps the Release in sync. |
+| Uploaded `.zip` to claude.ai | Ask your assistant *"is my TrackIQ Snacks skill current?"* — the skill checks the registry and tells you. Then re-upload. |
 
 Versions are semantic. A MAJOR bump means the output changed shape or the
 skill needs something new connected; everything else is safe to take
@@ -157,6 +171,8 @@ pointing at its repository:
   "source": { "source": "github", "repo": "TrackIQ-HQ/trackiq-your-skill" }
 }
 ```
+
+The hourly sync picks it up on the next run and vendors it into `skills/`.
 
 ## License
 

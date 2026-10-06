@@ -1,9 +1,9 @@
-name: Rebuild the all-skills bundle
+name: Sync skills and rebuild bundle
 
-# A skill ships from its own repo, and a cross-repo trigger would need a
-# stored personal token. Polling needs none: each run compares every skill's
-# latest release tag with the manifest beside the bundle, and only rebuilds
-# when a tag moved or the registry gained or lost a skill.
+# A skill ships from its own repo; a cross-repo trigger would need a stored
+# personal token. Polling needs none: each run compares every skill's latest
+# release tag with the manifest committed to this repo, and only syncs when
+# a tag moved or the registry gained/lost a skill.
 on:
   schedule:
     - cron: "17 * * * *"
@@ -13,39 +13,57 @@ on:
   workflow_dispatch:
     inputs:
       force:
-        description: Rebuild even if no skill changed
+        description: Sync even if no skill changed
         type: boolean
         default: false
 
 concurrency:
-  group: bundle
+  group: sync
   cancel-in-progress: false
 
 jobs:
-  bundle:
+  sync:
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ github.token }}
 
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - name: Check skills and rebuild if needed
-        id: build
+      - name: Sync skills/ and build dist/
+        id: sync
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: python scripts/build_bundle.py ${{ inputs.force && '--force' || '' }}
 
-      # Replace the assets on the latest release in place, so the download
-      # link on trackiq.com/skills (releases/latest/download/...) never moves.
-      - name: Publish
-        if: steps.build.outputs.changed == 'true'
+      # Commit the vendored tree + manifest so repo-download users always
+      # see the latest skills in skills/. The on:push trigger scopes to
+      # registry.json and the script only, so this commit doesn't re-fire.
+      - name: Commit vendored skills/
+        if: steps.sync.outputs.changed == 'true'
+        run: |
+          git config user.name "trackiq-skills-bot"
+          git config user.email "bot@trackiq.com"
+          git add skills/ trackiq-skills.manifest.json
+          if ! git diff --staged --quiet; then
+            git commit -m "sync skills from sub-repos [bot]"
+            git push
+          fi
+
+      # Replace the Release assets in place so the download link on
+      # trackiq.com/skills (releases/latest/download/...) never moves.
+      # Uploads: all-skills bundle + manifest + every per-skill zip, so
+      # claude.ai users can grab one at a time from the same page.
+      - name: Publish Release assets
+        if: steps.sync.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           tag=$(gh release view --repo "$GITHUB_REPOSITORY" --json tagName -q .tagName)
-          gh release upload "$tag" dist/trackiq-skills.zip dist/trackiq-skills.manifest.json \
+          gh release upload "$tag" dist/trackiq-skills.zip dist/trackiq-skills.manifest.json dist/trackiq-*.zip \
             --repo "$GITHUB_REPOSITORY" --clobber
