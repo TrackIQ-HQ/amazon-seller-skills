@@ -128,7 +128,7 @@ Three rules:
 
 ## Version
 
-`trackiq-amazon-weekly-executive-report` v1.0.0 (2026-09-16).
+`trackiq-amazon-weekly-executive-report` v1.0.1 (2026-10-06).
 
 If the user asks whether this skill is current, fetch
 `https://trackiq.com/skills/registry.json`, compare the `version` field for
